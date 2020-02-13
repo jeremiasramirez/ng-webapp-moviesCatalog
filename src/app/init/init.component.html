@@ -1,10 +1,28 @@
 
-<section class="poster">
-  <article class="poster__app">
-    <h1 class="title poster__title">Movie Catalogs</h1>
-    <img src="../assets/poster/posterMovie.jpg" alt="poster" class="poster__image">
+<section class="poster in">
+  <div>
+    <h1 class="title poster__title">
+      <pre style="font-size: 22px;">
+        Movie Catalogs <span class="fas fa-film text--white"></span>
+      </pre>
+  </h1>
 
 
-    <button class="btn--add min" (click)="navigateToHome()">Go</button>
+</div>
+    <article class="poster__app in">
+
+      <div class="containerTitle">
+        <img src="../assets/poster/posterMovie.jpg" alt="poster" class="poster__image in">
+      </div>
+
+      <div class="containerContentDescriptionApp">
+        <p class="textDescription">Mira las sinopsis de tus pelicula O series Favoritas!</p>
+
+        <button class="btn--add min in" (click)="navigateToHome()">Go to catalogs
+           <span class="fas fa-location-arrow"></span>
+        </button>
+
+      </div>
+
     </article>
 </section>
