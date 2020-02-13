@@ -24,9 +24,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/jeremias-lib/css/jeremias-lib.css",
+              "node_modules/jeremias-easydom/easydom.css",
+              "src/assets/fontawesome/css/all.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jeremias-easydom/easydom.js",
+            ]
           },
           "configurations": {
             "production": {
