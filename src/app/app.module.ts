@@ -21,6 +21,7 @@ import {  routingMovie } from "./app.route"
     BrowserModule,
     FormsModule,
     routingMovie
+
   ],
   providers: [],
   bootstrap: [AppComponent]

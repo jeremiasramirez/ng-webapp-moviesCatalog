@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router"
 
 
 @Component({
@@ -11,10 +12,30 @@ import { Component } from "@angular/core";
 export class InitComponent{
 
 
-  constructor(){
-    
-    console.log("init")
+  constructor(public navigate : Router){
+
+    setTimeout(()=>{
+      this.scrollTo();
+    },2000)
+
+
+
   }
 
+  scrollTo(){
+      let counterInterval: number = 200;
+      let intervalScroll = setInterval(()=>{
+          counterInterval -= 5;
+
+          window.scrollBy(0, counterInterval)
+         
+          if (counterInterval === 0){
+            clearInterval(intervalScroll);
+          }
+      },100);
+  }
+  navigateToHome(){
+    this.navigate.navigate(["home"]);
+  }
 
 }
