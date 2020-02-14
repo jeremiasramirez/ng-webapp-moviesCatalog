@@ -56,14 +56,15 @@ export class InitComponent{
         this.sliderRoutes.unshift(this.allRoutesSlider[counterSlider])
 
         if (counterSlider == 6 ){
-            this.resetSlider();
+
             clearInterval(intervalSlider);
+            this.resetSlider();
 
         }
 
         counterSlider++;
 
-    },3600)
+    },3200)
 
 
 

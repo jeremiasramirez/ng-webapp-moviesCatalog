@@ -20,6 +20,12 @@ export class Catalogs {
       return this.http.get(urlLocal)
 
   }
+  getOnlyShow(nume:number=1){
+
+      let urlLocal :string= this.httpUrl + name;
+      return this.http.get(urlLocal)
+
+  }
   getCatalogsComedy(name:any= "comedy"){
 
       let urlLocal :string= this.httpUrl + name;

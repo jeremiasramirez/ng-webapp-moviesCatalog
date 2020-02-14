@@ -84,13 +84,13 @@
   height: 450px;
   top: 175px;
   margin-bottom: -15px;
-  background-color: transparent;
-  animation: fadeHide 3.6s infinite linear;
+  background-color: rgba(0%, 0%, 0%, 70%);
+  animation: fadeHide 3.1s infinite linear;
 }
 @keyframes fadeHide {
 
   to{
-    background-color: rgba(0%, 0%, 0%, 70%);
+    background-color: transparent;
   }
   .containerContentDescriptionApp{
     margin-left: 100px;
