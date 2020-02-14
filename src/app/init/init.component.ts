@@ -29,9 +29,9 @@ export class InitComponent{
 
   resetSlider(){
     this.sliderRoutes.unshift("../assets/poster/posterMovie.jpg");
-    setTimeout(()=>{
+     
       this.sliderInit();
-    },1500);
+
   }
 
   // functions
@@ -63,7 +63,7 @@ export class InitComponent{
 
         counterSlider++;
 
-    },2000)
+    },3600)
 
 
 
