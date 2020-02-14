@@ -20,6 +20,7 @@ import {  routingMovie } from "./app.route"
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     routingMovie
 
   ],

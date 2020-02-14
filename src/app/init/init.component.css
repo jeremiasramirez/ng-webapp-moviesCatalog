@@ -17,7 +17,7 @@
   margin-bottom: -150px;
 }
 .poster__app{
-
+  overflow-y: hidden;
   position: sticky;
   text-align: center;
   top: 0;
@@ -26,10 +26,12 @@
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
+
 }
 .poster__title{
-  margin-top: .8em;
+  margin-top: .9em;
   font-size: 22px;
+  font-family:monospace;
   color: white;
 }
 .poster__image{
@@ -79,8 +81,9 @@
   border-radius: 20px;
   transition: .5s;
   position: absolute;
-  height: inherit;
+  height: 450px;
   top: 175px;
+  margin-bottom: -15px;
   background-color: transparent;
   animation: fadeHide 3.6s infinite linear;
 }

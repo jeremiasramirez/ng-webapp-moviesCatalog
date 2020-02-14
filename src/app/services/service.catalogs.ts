@@ -5,9 +5,14 @@ import { HttpClient } from "@angular/common/http"
 
 
 export class Catalogs {
-
+  public httpUrl : string = "http://api.tvmaze.com/search/shows?q=";
   constructor(public http : HttpClient){
 
+  }
+
+  getCatalogs(name:any= "action"){
+    let urlLocal :string= this.httpUrl + name;
+    return this.http.get(urlLocal)
   }
 
 }
