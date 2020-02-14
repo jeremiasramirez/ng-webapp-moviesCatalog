@@ -56,3 +56,12 @@
 .fa-film{
   font-size: 25px;
 }
+
+.containerImages{
+  overflow-x: hidden;
+  width: 308px;
+  height: 500px;
+  overflow-y: hidden;
+
+}
+ 
