@@ -29,7 +29,7 @@ export class InitComponent{
 
   resetSlider(){
     this.sliderRoutes.unshift("../assets/poster/posterMovie.jpg");
-     
+
       this.sliderInit();
 
   }
@@ -70,7 +70,7 @@ export class InitComponent{
   }
 
   scrollTo(){
-      let counterInterval: number = 100;
+      let counterInterval: number = 500;
        setTimeout(()=>{
 
           window.scrollBy(0, counterInterval)
