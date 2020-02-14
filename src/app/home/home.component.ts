@@ -12,10 +12,12 @@ export class HomeComponent{
 
 
   constructor(public catalog: Catalogs){
-    // this.catalog.subscribe((data)=>{
-    //   console.log(data)
-    // })
+    this.catalog.getCatalogs("anime").subscribe((data)=>{
+      console.log(data)
+    })
   }
+
+
 
 
 }

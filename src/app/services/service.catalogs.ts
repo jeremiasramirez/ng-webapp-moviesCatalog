@@ -14,5 +14,34 @@ export class Catalogs {
     let urlLocal :string= this.httpUrl + name;
     return this.http.get(urlLocal)
   }
+  getCatalogsDrama(name:any= "drama"){
 
+      let urlLocal :string= this.httpUrl + name;
+      return this.http.get(urlLocal)
+
+  }
+  getCatalogsComedy(name:any= "comedy"){
+
+      let urlLocal :string= this.httpUrl + name;
+      return this.http.get(urlLocal)
+
+  }
+  getCatalogsGirls(name:any= "girls"){
+
+      let urlLocal :string= this.httpUrl + name;
+      return this.http.get(urlLocal)
+
+  }
+  getCatalogsChild(name:any= "anime"){
+
+      let urlLocal :string= this.httpUrl + name;
+      return this.http.get(urlLocal)
+
+  }
+  getCatalogsRomance(name:any= "romance"){
+
+      let urlLocal :string= this.httpUrl + name;
+      return this.http.get(urlLocal)
+
+  }
 }
