@@ -1,0 +1,61 @@
+.cards__action__container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.card__border{
+  width: inherit;
+  height: inherit;
+  border: 1px solid #eee;
+  min-height: 200px;
+  margin: .3em;
+  border-radius: 10px;
+}
+.fa-circle-notch{
+  color: black;
+  animation: rotateCircle 1.4s infinite linear;
+  transition: 1s;
+  position: relative;
+  top: 150px;
+}
+@keyframes rotateCircle {
+    to{
+      transform: rotate(360deg);
+      transition: 1s;
+    }
+    10%{
+      color: red;
+    }
+    30%{
+      color: magenta;
+    }
+    50%{
+      color: blue;
+    }
+    80%{
+      color: orangered;
+    }
+
+    90%{
+      color: blue;
+    }
+
+}
+.cards__action{
+  margin: .3em;
+  width: 270px;
+  min-height: 200px;
+  border-radius: 10px;
+  /* height: 470px; */
+  text-align: center;
+}
+.cards__action__title{
+  margin:0;
+}
+.cards__action__image{
+  width: 250px;
+  height: auto;
+  text-align: center;
+  border-radius: 15px;
+}

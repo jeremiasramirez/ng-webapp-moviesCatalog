@@ -1,1 +1,18 @@
-<h1>home</h1>
+
+  <h1>Action</h1>
+<section class="cards__action__container in">
+
+  <article class="cards__action" *ngFor="let action of actionCard">
+
+      <div class="card__border"  *ngIf="showCard==1">
+
+        <h1 class="cards__action__title">{{action.show.name}}</h1>
+        <img [src]="action.show.image.original" alt="poster" class="cards__action__image in">
+        <button class="btn--add min" *ngIf="showCard==1">Show catalog</button>
+      </div>
+
+        <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
+
+  </article>
+
+</section>

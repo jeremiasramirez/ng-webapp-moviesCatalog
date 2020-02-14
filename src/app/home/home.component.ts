@@ -10,10 +10,22 @@ import { Catalogs } from "../services/service.catalogs"
 
 export class HomeComponent{
 
+  public actionCard: any[] = []
+  public comedyCard :any[] = []
+  public showCard : number = 0;
+
 
   constructor(public catalog: Catalogs){
-    this.catalog.getCatalogs("anime").subscribe((data)=>{
-      console.log(data)
+    this.actions();
+
+    setTimeout(()=>{this.showCard = 1}, 1000);
+
+
+  }
+  actions(){
+    this.catalog.getCatalogs().subscribe((data)=>{
+        this.actionCard = data;
+        console.log(this.actionCard)
     })
   }
 
