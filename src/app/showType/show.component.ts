@@ -9,9 +9,9 @@ import { Catalogs } from "../services/service.catalogs"
 })
 
 export class ShowComponent{
-
+  public showCard = 0;
   constructor(public catalog: Catalogs){
-
+    setTimeout(() => {this.showCard=1}, 1500);
   }
 
 

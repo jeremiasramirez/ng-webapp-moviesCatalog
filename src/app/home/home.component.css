@@ -21,10 +21,36 @@
   top: 150px;
 }
 .fa-star{
+    animation: colorates 2.5s infinite linear;
+}
+@keyframes colorates {
+    to{
+      transition: 1s;
+    }
+    10%{
+      color: red;
+    }
+    30%{
+      color: magenta;
+    }
+    50%{
+      color: blue;
+    }
+    80%{
+      color: orangered;
+    }
+
+    90%{
+      color: blue;
+    }
+
+}
+ .fa-circle-notch{
     animation: colorate 2.5s infinite linear;
 }
 @keyframes colorate {
     to{
+      transform: rotate(360deg);
       transition: 1s;
     }
     10%{
