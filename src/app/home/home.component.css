@@ -10,6 +10,7 @@
   border: 1px solid #eee;
   min-height: 200px;
   margin: .3em;
+  margin-left: -1px;
   border-radius: 10px;
 }
 .fa-circle-notch{
@@ -42,16 +43,34 @@
     }
 
 }
+.title{
+  font-size: 16px;
+}
 .cards__action{
   margin: .3em;
   width: 270px;
   min-height: 200px;
   border-radius: 10px;
+  margin-left: -10px;
   /* height: 470px; */
   text-align: center;
 }
 .cards__action__title{
   margin:0;
+  font-family: monospace;
+  font-size: 16px;
+  color: #222;
+}
+.btn--add:hover .fa-arrow-right{
+  transform: translateX(30px);
+  transition: .8s;
+  opacity: .6;
+  color: lightgreen;
+}
+.fa-arrow-right{
+  transition: .4s;
+  margin: 0;
+  padding:0;
 }
 .cards__action__image{
   width: 250px;
