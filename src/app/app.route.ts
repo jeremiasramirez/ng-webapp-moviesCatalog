@@ -10,12 +10,22 @@ import {  SearchComponent } from "./search/search.component"
 
 
 const ROUTES : Routes = [
-  {path: "home", component: HomeComponent},
+  {
+    path: "home",
+    component: HomeComponent
+  },
   {
     path: "search",
     component: SearchComponent
-},
-  {path: '', component: InitComponent}
+  },
+  {
+    path: "search/:type",
+    component: HomeComponent
+  },
+  {
+    path: '',
+    component: InitComponent
+  }
 ]
 
 

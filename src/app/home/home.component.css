@@ -20,9 +20,11 @@
   position: relative;
   top: 150px;
 }
-@keyframes rotateCircle {
+.fa-star{
+    animation: colorate 2.5s infinite linear;
+}
+@keyframes colorate {
     to{
-      transform: rotate(360deg);
       transition: 1s;
     }
     10%{
@@ -45,6 +47,9 @@
 }
 .title{
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .cards__action{
   margin: .3em;

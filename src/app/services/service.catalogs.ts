@@ -20,10 +20,12 @@ export class Catalogs {
       return this.http.get(urlLocal)
 
   }
-  getOnlyShow(nume:number=1){
+  getOnlyShow(id:number=0){
 
-      let urlLocal :string= this.httpUrl + name;
+    if ( id != 0 ){
+      let urlLocal :string= "http://api.tvmaze.com/shows/" + id;
       return this.http.get(urlLocal)
+    }
 
   }
   getCatalogsComedy(name:any= "comedy"){
