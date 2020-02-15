@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router"
 
 @Component({
   selector: 'search-app',
@@ -8,7 +9,11 @@ import { Component } from "@angular/core";
 
 export class SearchComponent{
   public showCard: number = 0;
-  constructor(){
+  constructor(public router:Router){
     setTimeout(()=>{this.showCard = 1}, 1000);
+  }
+
+  redirectToNavigate(){
+    this.router.navigate(["navigate"])
   }
 }
