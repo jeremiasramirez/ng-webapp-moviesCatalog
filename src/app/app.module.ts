@@ -4,18 +4,22 @@ import { FormsModule } from "@angular/forms"
 import { HttpClientModule} from "@angular/common/http"
 import { CommonModule} from "@angular/common"
 
+// component
 import { AppComponent } from './app.component';
 import {  HomeComponent } from "./home/home.component"
 import {  InitComponent } from "./init/init.component"
 import {  SearchComponent } from "./search/search.component"
+import {  ShowComponent } from "./showType/show.component"
 
+// routing
 import {  routingMovie } from "./app.route"
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    InitComponent
+    InitComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,

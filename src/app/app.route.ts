@@ -7,7 +7,7 @@ import { ModuleWithProviders } from "@angular/core"
 import { HomeComponent } from "./home/home.component"
 import { InitComponent } from "./init/init.component"
 import {  SearchComponent } from "./search/search.component"
-
+import {  ShowComponent } from "./showType/show.component"
 
 const ROUTES : Routes = [
   {
@@ -19,8 +19,12 @@ const ROUTES : Routes = [
     component: SearchComponent
   },
   {
-    path: "search/:type",
-    component: HomeComponent
+    path: "navigate",
+    component: ShowComponent
+  },
+  {
+    path: "navigate/:type",
+    component: ShowComponent
   },
   {
     path: '',
