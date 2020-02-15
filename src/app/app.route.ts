@@ -6,16 +6,14 @@ import { ModuleWithProviders } from "@angular/core"
 
 import { HomeComponent } from "./home/home.component"
 import { InitComponent } from "./init/init.component"
+import {  SearchComponent } from "./search/search.component"
 
 
 const ROUTES : Routes = [
   {path: "home", component: HomeComponent},
   {
     path: "search",
-    component: HomeComponent,
-    children: [
-      {path: 'comedy', component: HomeComponent}
-    ]
+    component: SearchComponent
 },
   {path: '', component: InitComponent}
 ]

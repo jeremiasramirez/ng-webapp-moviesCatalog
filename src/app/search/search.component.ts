@@ -7,7 +7,8 @@ import { Component } from "@angular/core";
 })
 
 export class SearchComponent{
+  public showCard: number = 0;
+  constructor(){
 
-  
-
+  }
 }
