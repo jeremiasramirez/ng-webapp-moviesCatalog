@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Catalogs } from "../services/service.catalogs"
+import { Router } from "@angular/router"
 
 @Component({
   selector: 'home-app',
@@ -14,8 +15,7 @@ export class HomeComponent{
   public comedyCard :any[] = []
   public showCard : number = 0;
 
-
-  constructor(public catalog: Catalogs){
+  constructor(public catalog: Catalogs, public router: Router){
     this.actions();
 
     setTimeout(()=>{this.showCard = 1}, 1000);
@@ -29,8 +29,11 @@ export class HomeComponent{
     })
   }
 
-  showCardOnly(){
-    alert("klk")
+  showCardOnly(id:number=0){
+    if (id != 0){
+      setTimeout(()=>{this.router.navigate(["home", id])}, 100);
+    }
+
   }
 
 

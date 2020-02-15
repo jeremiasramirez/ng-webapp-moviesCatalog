@@ -13,6 +13,9 @@ import { ActivatedRoute } from "@angular/router"
 export class OnlyComponent{
 
   constructor(public catalog: Catalogs, public param:ActivatedRoute){
+    this.param.params.subscribe((data)=>{
+      console.log(data)
+    })
   }
 
 
