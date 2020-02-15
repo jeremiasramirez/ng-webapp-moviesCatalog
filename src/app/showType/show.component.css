@@ -1,0 +1,72 @@
+
+.state{
+  width: 80px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  color: white;
+  font-family: monospace;
+  font-weight: 600;
+  margin: .5em;
+  /* margin-bottom: -2em; */
+  line-height: 30px;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+.state:hover{
+  transform: translateY(-10px);
+  transition: .5s;
+  opacity: .8;
+}
+ .comedy{
+   background-image: linear-gradient(to bottom, blue, #ddd);
+ }
+ .terror{
+   background-image: linear-gradient(to top, black, #777);
+ }
+ .romance{
+   background-image: linear-gradient(to bottom, red, magenta);
+ }
+ .anime{
+   background-image: linear-gradient(to bottom, yellow, orangered);
+ }
+
+.card__states{
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.fa-circle-notch{
+  color: black;
+  animation: rotateCircle 1.4s infinite linear;
+  transition: 1s;
+  /* position: relative; */
+  /* top: 150px; */
+}
+@keyframes rotateCircle {
+    to{
+      transform: rotate(360deg);
+      transition: 1s;
+    }
+    10%{
+      color: red;
+    }
+    30%{
+      color: magenta;
+    }
+    50%{
+      color: blue;
+    }
+    80%{
+      color: orangered;
+    }
+
+    90%{
+      color: blue;
+    }
+
+}
