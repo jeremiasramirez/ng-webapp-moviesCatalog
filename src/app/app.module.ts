@@ -7,7 +7,7 @@ import { HttpClientModule} from "@angular/common/http"
 import { AppComponent } from './app.component';
 import {  HomeComponent } from "./home/home.component"
 import {  InitComponent } from "./init/init.component"
-
+import {  SearchComponent } from "./search/search.component"
 
 import {  routingMovie } from "./app.route"
 
