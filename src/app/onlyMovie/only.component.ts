@@ -11,11 +11,24 @@ import { ActivatedRoute } from "@angular/router"
 })
 
 export class OnlyComponent{
+  public only : any[] = []
+
 
   constructor(public catalog: Catalogs, public param:ActivatedRoute){
-    this.param.params.subscribe((data)=>{
-      console.log(data)
+
+    this.param.params.subscribe((response)=>{
+      this.getForId(response.id)
     })
+
+
+  }
+
+  getForId(id:number=0){
+    if (id != 0){
+      this.catalog.getOnlyShow(id).subscribe((response)=>{
+        this.only = response;
+      })
+    }
   }
 
 
