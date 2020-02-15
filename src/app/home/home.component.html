@@ -4,10 +4,10 @@
 
   <article class="cards__action" *ngFor="let action of actionCard">
 
-      <div class="card__border"  *ngIf="showCard==1">
+      <div class="card__border blurtime"  *ngIf="showCard==1">
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
-        <img [src]="action.show.image.original" alt="poster" class="cards__action__image in">
+        <img [src]="action.show.image.original" alt="poster" class="cards__action__image">
         <button class="btn--add min" *ngIf="showCard==1">Show catalog</button>
       </div>
 

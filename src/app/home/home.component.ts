@@ -23,7 +23,7 @@ export class HomeComponent{
 
   }
   actions(){
-    this.catalog.getCatalogs().subscribe((data)=>{
+    this.catalog.getCatalogs().subscribe((data:any)=>{
         this.actionCard = data;
         console.log(this.actionCard)
     })
