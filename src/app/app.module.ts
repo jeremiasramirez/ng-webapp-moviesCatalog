@@ -10,6 +10,7 @@ import {  HomeComponent } from "./home/home.component"
 import {  InitComponent } from "./init/init.component"
 import {  SearchComponent } from "./search/search.component"
 import {  ShowComponent } from "./showType/show.component"
+import {  OnlyComponent } from "./onlyMovie/only.component"
 
 // routing
 import {  routingMovie } from "./app.route"
@@ -19,7 +20,8 @@ import {  routingMovie } from "./app.route"
     AppComponent,
     HomeComponent,
     InitComponent,
-    ShowComponent
+    ShowComponent,
+    OnlyComponent
   ],
   imports: [
     BrowserModule,

@@ -29,6 +29,10 @@ export class HomeComponent{
     })
   }
 
+  showCardOnly(){
+    alert("klk")
+  }
+
 
 
 

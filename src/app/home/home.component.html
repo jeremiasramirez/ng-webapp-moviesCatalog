@@ -8,7 +8,7 @@
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" alt="poster" class="cards__action__image">
-        <button class="btn--add min" *ngIf="showCard==1">Show catalog <span class="fas fa-arrow-right"></span></button>
+        <button class="btn--add min" (click)="showCardOnly()" *ngIf="showCard==1">Show catalog <span class="fas fa-arrow-right"></span></button>
       </div>
 
         <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
