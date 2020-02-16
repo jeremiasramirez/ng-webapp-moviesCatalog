@@ -11,17 +11,21 @@ import {  InitComponent } from "./init/init.component"
 import {  SearchComponent } from "./search/search.component"
 import {  ShowComponent } from "./showType/show.component"
 import {  OnlyComponent } from "./onlyMovie/only.component"
+import { CutText } from "./pipes/pipe.cutText"
 
 // routing
 import {  routingMovie } from "./app.route"
 
 @NgModule({
   declarations: [
+
     AppComponent,
     HomeComponent,
     InitComponent,
     ShowComponent,
-    OnlyComponent
+    OnlyComponent,
+    CutText
+
   ],
   imports: [
     BrowserModule,

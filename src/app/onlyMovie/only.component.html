@@ -1,3 +1,54 @@
+
+<div class="responsive">
+  <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
+</div>
+
 <div >
   {{only | json}}
 </div>
+
+<section class="card__only__show">
+
+  <article class="card__only__show__module1" >
+      <h1>{{only.name}}</h1>
+      <img [src]="only.image.original" alt="poster show" class="image__original">
+  </article>
+
+  <article class="card__only__show__description" >
+
+      <div class="module1">
+
+        <h1 class="main__title">Description</h1>
+        <div class="">
+            <p>{{only.summary | cutText:0:2}}</p>
+        </div>
+
+          <div class="">
+              <h1 class="main__title">Original name</h1>
+              <p>{{only.name}}</p>
+          </div>
+
+        </div>
+
+        <div class="module1">
+
+            <div class="">
+              <h1 class="main__title">Language</h1>
+              <p>{{only.language}}</p>
+            </div>
+
+            <h1 class="main__title">Genres</h1>
+            <div class="">
+
+                 <p *ngFor="let gen of only.genres">{{gen}}</p>
+
+            </div>
+        </div>
+
+
+
+
+  </article>
+
+
+</section>

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Catalogs } from "../services/service.catalogs"
 import { Router } from "@angular/router"
+import { Router } from "@angular/router"
 
 @Component({
   selector: 'home-app',
@@ -17,7 +18,7 @@ export class HomeComponent{
 
   constructor(public catalog: Catalogs, public router: Router){
     this.actions();
-
+    this.scrollTo();
     setTimeout(()=>{this.showCard = 1}, 1000);
 
 
@@ -25,14 +26,28 @@ export class HomeComponent{
   actions(){
     this.catalog.getCatalogs().subscribe((data:any)=>{
         this.actionCard = data;
-        console.log(this.actionCard)
     })
+  }
+
+
+  scrollTo(){
+      let counterInterval: number = 500;
+       setTimeout(()=>{
+
+          window.scrollBy(0, counterInterval)
+
+      },100);
+  }
+
+  redirectToNavigate(){
+    this.router.navigate(["navigate"])
   }
 
   showCardOnly(id:number=0){
     if (id != 0){
       setTimeout(()=>{this.router.navigate(["home", id])}, 100);
     }
+
 
   }
 

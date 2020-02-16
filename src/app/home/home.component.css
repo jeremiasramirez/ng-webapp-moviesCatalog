@@ -77,20 +77,48 @@
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 400px) {
+  .cards__action{
+    margin-left: -10px;
+  }
+  .card__border{
+    margin-left: -8px;
+  }
+}
 .cards__action{
   margin: .3em;
   width: 270px;
   min-height: 200px;
   border-radius: 10px;
-  margin-left: -10px;
+  /* margin-left: -10px; */
   /* height: 470px; */
   text-align: center;
 }
+
 .cards__action__title{
   margin:0;
   font-family: monospace;
   font-size: 16px;
   color: #222;
+}
+
+.navigate__button{
+  cursor:pointer;
+  font-weight: 600;
+  color: #ddd;
+  width: 150px;
+  font-family: arial;
+  border: none;
+  background-color: #e03493;
+  border-radius: 3px;
+  transition: .5s;
+}
+.navigate__button:hover{
+  background-color: #8f2760
+}
+.fa-paper-plane{
+  margin:0;
+  padding:0;
 }
 .btn--add:hover .fa-arrow-right{
   transform: translateX(30px);

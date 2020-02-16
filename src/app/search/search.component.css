@@ -17,19 +17,6 @@ form input:hover{
 .fa-paper-plane{
   margin:0;
   padding:0;
-  color: orangered;
+  /* color: orangered; */
 }
-.navigate__button{
-  cursor:pointer;
-  font-weight: 600;
-  color: #444;
-  width: 100px;
-  font-family: arial;
-  border: none;
-  background-color: #eee;
-  border-radius: 2px;
-}
-.navigate__button:hover{
-  background-color: #ddd;
-  transition: .3s;
-}
+ 

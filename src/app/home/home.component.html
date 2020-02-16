@@ -2,7 +2,7 @@
 <h1 class="title text--blue in">Action <span class="fas fa-star text--red"></span> </h1>
 <section class="cards__action__container in">
 
-  <article class="cards__action" *ngFor="let action of actionCard">
+  <article class="cards__action" *ngFor="let action of actionCard | slice:0:4">
 
       <div class="card__border blurtime"  *ngIf="showCard==1">
 
@@ -16,3 +16,9 @@
   </article>
 
 </section>
+
+
+
+<div class="responsive" *ngIf="showCard==1">
+  <button class="navigate__button" (click)="redirectToNavigate()">Navigate <span class="fas fa-paper-plane"></span></button>
+</div>
