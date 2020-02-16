@@ -28,7 +28,6 @@ export class OnlyComponent{
     if (id != 0){
       this.catalog.getOnlyShow(id).subscribe((response)=>{
         this.only = response;
-        console.log(this.only.name)
       })
     }
   }
