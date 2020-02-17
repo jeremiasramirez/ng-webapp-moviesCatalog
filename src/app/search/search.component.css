@@ -9,12 +9,12 @@ form input{
 }
 form input:hover{
   transition: .7s;
-  border-bottom-color: #ddd; 
+  border-bottom-color: #ddd;
 }
 .responsive{
     margin-top: 230px;
 }
-.fa-paper-plane{
+.fa-paper-plane, .fa-arrow-left{
   margin:0;
   padding:0;
   /* color: orangered; */

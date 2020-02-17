@@ -31,7 +31,9 @@ export class OnlyComponent{
       })
     }
   }
-
+  backPage(){
+    window.history.back()
+  }
 
 
 }

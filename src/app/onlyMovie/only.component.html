@@ -1,6 +1,6 @@
 
-<div class="responsive in">
-  <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
+<div class="responsive in"  *ngIf="!showCard">
+  <span class="fas fa-circle-notch" ></span>
 </div>
 
     <h1 class="title in text--black"  *ngIf="showCard==1">{{only.name}}</h1>
@@ -9,6 +9,10 @@
   <article class="card__only__show__module1" >
       <!-- <h1>{{only.name}}</h1> -->
       <img class="in" [src]="only.image.original" alt="poster show" class="image__original">
+      <div class="">
+        <button type="button" name="button" class="btn--add min" (click)="backPage()"> <span style="margin:0;padding:0" class="fas fa-arrow-left"></span> Back</button>
+
+      </div>
   </article>
 
   <article class="card__only__show__description" >

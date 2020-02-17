@@ -5,7 +5,7 @@ import { Catalogs } from "../services/service.catalogs"
 @Component({
   selector: 'search-app',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css', '../home/home.component.css'],
+  styleUrls: ['./search.component.css', '../home/home.component.css','../onlyMovie/only.component.css'],
   providers: [Catalogs]
 })
 
@@ -17,7 +17,9 @@ export class SearchComponent{
   public textInput : any = "";
   public showMsj : number;
   public showButtonNavigateBetweenPage:number = 0;
- 
+  public onlyId=0;
+  public only;
+
   constructor(public router:Router, public param:ActivatedRoute, public catalogs:Catalogs){
     setTimeout(()=>{this.showCard = 0}, 2000);
 
@@ -41,6 +43,11 @@ export class SearchComponent{
     this.router.navigate(["navigate"])
   }
 
+  backPage(){
+    // window.history.back()
+    this.onlyId=0;
+  }
+
   searchShow(response:any){
 
     if (response != ""){
@@ -51,6 +58,19 @@ export class SearchComponent{
       })
 
     }
+
+  }
+
+  goCard(id:any){
+    console.log(id);
+    this.onlyId=1;
+    this.showCard=1
+    setTimeout(()=>{this.showCard = 0}, 2000);
+    this.catalogs.getOnlyShow(id).subscribe((response:any)=>{
+      this.only = response;
+      console.log(this.only )
+
+    })
 
   }
 
