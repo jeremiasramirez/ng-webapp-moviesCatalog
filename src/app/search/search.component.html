@@ -1,7 +1,8 @@
 <form class="form in">
-  <input class="large" type="search" name="search" placeholder="Search your catalog">
+  <input class="large" [value]="textInput" #inputSearch type="search" name="search" (keyup.enter)="searchShow(inputSearch.value)" placeholder="Search your catalog">
+  <button type="button" (click)="searchShow(inputSearch.value)" class="btn--add minmin">Search</button>
 </form>
 
-<div class="responsive in" *ngIf="existParam">
+<div class="responsive in" *ngIf="!param.result">
   <button class="navigate__button" (click)="redirectToNavigate()">Navigate <span class="fas fa-paper-plane"></span></button>
 </div>
