@@ -10,29 +10,28 @@ import { Catalogs } from "../services/service.catalogs"
 })
 
 export class SearchComponent{
-  public showCard: number = 0;
-  public param:Object;
+
+
+  public showCard: number = 1;
+  public cards : Object;
   public textInput : any = "";
-
+  public showMsj : number;
+  public showButtonNavigateBetweenPage:number = 0;
+ 
   constructor(public router:Router, public param:ActivatedRoute, public catalogs:Catalogs){
-    setTimeout(()=>{this.showCard = 1}, 1000);
+    setTimeout(()=>{this.showCard = 0}, 2000);
 
-    this.param.params.subscribe((params)=>{
-      this.param = params;
+    this.param.params.subscribe((params:any)=>{
+      let param_ = params.result;
 
+      if (param_){
 
-
-      console.log(this.param)
-
-
-      if (this.param.result){
-        this.textInput = this.param.result
-        this.searchShow(this.textInput)
-        console.log("esta lleno")
+        this.searchShow(param_)
+        this.textInput = param_
+        this.showButtonNavigateBetweenPage=1;
+        this.showMsj=1;
       }
-      else{
-        console.log("esta vacio")
-      }
+
 
     })
 
@@ -43,12 +42,12 @@ export class SearchComponent{
   }
 
   searchShow(response:any){
-    console.log(response)
+
     if (response != ""){
       this.router.navigate(["search", response])
 
-      this.catalogs.getCatalogs(response).subscribe((data)=>{
-        console.log(data)
+      this.catalogs.getCatalogs(response).subscribe((data:any)=>{
+        this.cards = data;
       })
 
     }

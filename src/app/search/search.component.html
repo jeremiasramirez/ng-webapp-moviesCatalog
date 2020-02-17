@@ -3,6 +3,33 @@
   <button type="button" (click)="searchShow(inputSearch.value)" class="btn--add minmin">Search</button>
 </form>
 
-<div class="responsive in" *ngIf="!param.result">
+
+
+<br>
+<br>
+<h1 class="title text--blue in">Search <span class="fas fa-search text--red"></span> </h1>
+
+
+<div class="responsive in" *ngIf="showButtonNavigateBetweenPage==0">
   <button class="navigate__button" (click)="redirectToNavigate()">Navigate <span class="fas fa-paper-plane"></span></button>
 </div>
+
+
+
+
+<section class="cards__action__container in">
+
+  <article class="cards__action" *ngFor="let action of cards">
+
+      <div class="card__border blurtime"  *ngIf="action.show.image.original &&showCard==0" >
+
+        <h1 class="cards__action__title">{{action.show.name}}</h1>
+        <img [src]="action.show.image.original" alt="poster" class="cards__action__image">
+        <button class="btn--add min" >Show catalog <span class="fas fa-arrow-right"></span></button>
+      </div>
+
+        <span class="fas fa-circle-notch" *ngIf="showCard==1"></span>
+
+  </article>
+
+</section>
