@@ -16,7 +16,7 @@ export class OnlyComponent{
   public showCard : number = 0;
   constructor(public catalog: Catalogs, public param:ActivatedRoute){
 
-    setTimeout(()=>{this.showCard=1},1000)
+    setTimeout(()=>{this.showCard=1},2000)
     this.param.params.subscribe((response)=>{
       this.getForId(response.id)
     })

@@ -3,14 +3,11 @@
   <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
 </div>
 
-<div >
-  {{only | json}}
-</div>
-
-<section class="card__only__show">
+    <h1 class="title">{{only.name}}</h1>
+<section class="card__only__show" *ngIf="showCard==1">
 
   <article class="card__only__show__module1" >
-      <h1>{{only.name}}</h1>
+      <!-- <h1>{{only.name}}</h1> -->
       <img [src]="only.image.original" alt="poster show" class="image__original">
   </article>
 
@@ -21,11 +18,13 @@
         <h1 class="main__title">Description</h1>
         <div class="">
             <p>{{only.summary | cutText:0:2}}</p>
+            <p *ngIf="!only.summary">not available</p>
         </div>
 
           <div class="">
               <h1 class="main__title">Original name</h1>
               <p>{{only.name}}</p>
+              <p *ngIf="!only.name">not available</p>
           </div>
 
         </div>
@@ -35,14 +34,58 @@
             <div class="">
               <h1 class="main__title">Language</h1>
               <p>{{only.language}}</p>
+              <p *ngIf="!only.language">not available</p>
             </div>
 
-            <h1 class="main__title">Genres</h1>
+            <h1 class="main__title">Country</h1>
             <div class="">
 
-                 <p *ngFor="let gen of only.genres">{{gen}}</p>
+              <p>{{only.network.country.name}}</p>
+              <p *ngIf="!only.network.country.name">not available</p>
 
             </div>
+
+
+            <h1 class="main__title">Premiered</h1>
+            <div class="">
+
+              <p>{{only.premiered}}</p>
+              <p *ngIf="!only.premiered">not available</p>
+
+            </div>
+
+            <h1 class="main__title">Type</h1>
+            <div class="">
+
+              <p>{{only.type}}</p>
+              <p *ngIf="!only.type">not available</p>
+
+            </div>
+
+            <h1 class="main__title">Status</h1>
+            <div class="">
+
+              <p>{{only.status}}</p>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="module1">
+            <h1 class="main__title">Genres</h1>
+            <div class="" *ngFor="let gen of only.genres">
+              <p *ngIf="only.genres">{{gen}}</p>
+              <p *ngIf="!only.genres">not available</p>
+            </div>
+
+            <h1 class="main__title" >Official site</h1>
+            <div class="">
+              <p *ngIf="only.officialSite" class="wraps" > <a class="wraps" [href]="only.officialSite">{{only.officialSite}}</a></p>
+              <p *ngIf="!only.officialSite">not available</p>
+            </div>
+
         </div>
 
 
