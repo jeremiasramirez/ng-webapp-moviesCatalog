@@ -9,7 +9,7 @@ form input{
 }
 form input:hover{
   transition: .7s;
-  border-color: lightblue;
+  border-bottom-color: #ddd; 
 }
 .responsive{
     margin-top: 230px;
@@ -19,4 +19,3 @@ form input:hover{
   padding:0;
   /* color: orangered; */
 }
- 

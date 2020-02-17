@@ -23,6 +23,7 @@ import {  routingMovie } from "./app.route"
     HomeComponent,
     InitComponent,
     ShowComponent,
+    SearchComponent,
     OnlyComponent,
     CutText
 

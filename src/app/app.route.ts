@@ -25,6 +25,10 @@ const ROUTES : Routes = [
     component: SearchComponent
   },
   {
+    path: "search/:result",
+    component: SearchComponent
+  },
+  {
     path: "navigate",
     component: ShowComponent
   },

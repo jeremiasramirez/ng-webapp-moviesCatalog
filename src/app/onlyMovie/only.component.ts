@@ -11,13 +11,13 @@ import { ActivatedRoute } from "@angular/router"
 })
 
 export class OnlyComponent{
-  public only : any[] = []
+  public only : any;
 
-  public showCard : number = 0;
+  public showCard;
   constructor(public catalog: Catalogs, public param:ActivatedRoute){
 
     setTimeout(()=>{this.showCard=1},2000)
-    this.param.params.subscribe((response)=>{
+    this.param.params.subscribe((response:any)=>{
       this.getForId(response.id)
     })
 

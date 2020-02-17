@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Router } from "@angular/router"
+import { Router, ActivatedRoute } from "@angular/router"
 
 @Component({
   selector: 'search-app',
@@ -9,8 +9,21 @@ import { Router } from "@angular/router"
 
 export class SearchComponent{
   public showCard: number = 0;
-  constructor(public router:Router){
+  public existParam :number= 0;
+
+
+
+  constructor(public router:Router, public param:ActivatedRoute){
     setTimeout(()=>{this.showCard = 1}, 1000);
+
+    this.param.params.subscribe((params)=>{
+      if (!(params === {})){
+          this.existParam=1;
+          console.log(params)
+      }
+
+    })
+
   }
 
   redirectToNavigate(){

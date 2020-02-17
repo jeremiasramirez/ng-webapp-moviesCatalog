@@ -2,6 +2,6 @@
   <input class="large" type="search" name="search" placeholder="Search your catalog">
 </form>
 
-<div class="responsive in">
+<div class="responsive in" *ngIf="existParam">
   <button class="navigate__button" (click)="redirectToNavigate()">Navigate <span class="fas fa-paper-plane"></span></button>
 </div>
