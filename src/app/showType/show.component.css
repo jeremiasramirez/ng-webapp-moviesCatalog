@@ -32,6 +32,10 @@
  .anime{
    background-image: linear-gradient(to bottom, yellow, orangered);
  }
+ .action{
+   background-image: linear-gradient(to top, pink, #eee);
+   color: #444;
+ }
 
 .card__states{
   margin-top: 1em;

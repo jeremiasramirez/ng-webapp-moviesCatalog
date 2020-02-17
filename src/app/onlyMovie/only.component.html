@@ -1,14 +1,14 @@
 
-<div class="responsive">
+<div class="responsive in">
   <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
 </div>
 
-    <h1 class="title">{{only.name}}</h1>
-<section class="card__only__show" *ngIf="showCard==1">
+    <h1 class="title in text--black"  *ngIf="showCard==1">{{only.name}}</h1>
+<section class="card__only__show blurtime in" *ngIf="showCard==1">
 
   <article class="card__only__show__module1" >
       <!-- <h1>{{only.name}}</h1> -->
-      <img [src]="only.image.original" alt="poster show" class="image__original">
+      <img class="in" [src]="only.image.original" alt="poster show" class="image__original">
   </article>
 
   <article class="card__only__show__description" >
