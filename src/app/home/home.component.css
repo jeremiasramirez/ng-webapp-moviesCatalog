@@ -105,16 +105,16 @@
 .navigate__button{
   cursor:pointer;
   font-weight: 600;
-  color: #ddd;
+  color: #777;
   width: 150px;
   font-family: arial;
   border: none;
-  background-image: linear-gradient(to bottom, #111, #333);
+  background-color: #eee;
   border-radius: 3px;
   transition: .5s;
 }
 .navigate__button:hover{
-  background-color: #222
+  background-color: #ddd
 }
 .fa-paper-plane{
   margin:0;

@@ -26,7 +26,7 @@ export class OnlyComponent{
 
   getForId(id:number=0){
     if (id != 0){
-      this.catalog.getOnlyShow(id).subscribe((response)=>{
+      this.catalog.getOnlyShow(id).subscribe((response:any)=>{
         this.only = response;
       })
     }
