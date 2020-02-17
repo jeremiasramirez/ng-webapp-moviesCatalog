@@ -27,7 +27,7 @@
       <div class="card__border blurtime"  *ngIf="action.show.image.original &&showCard==0" >
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
-        <img [src]="action.show.image.original" alt="poster" class="cards__action__image">
+        <img [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
         <button class="btn--add min" (click)="goCard(action.show.id)">Show catalog <span class="fas fa-arrow-right"></span></button>
       </div>
 
@@ -43,9 +43,6 @@
 
 
 
-<!-- other page -->
-<button  *ngIf="onlyId==1" style="margin-bottom:6em" class="btn--error" (click)="backPage()"> <span class="fas fa-arrow-left"></span> back </button>
-
 
 <div style="margin-top: 0px" class="in" *ngIf="onlyId==1">
 
@@ -60,7 +57,13 @@
 
     <article class="card__only__show__module1" >
         <!-- <h1>{{only.name}}</h1> -->
-        <img class="in" [src]="only.image.original" alt="poster show" class="image__original">
+        <img class="in" style="border-radius:5px;" [src]="only.image.original" alt="poster show" class="image__original">
+        <div class="">
+          <!-- back page -->
+          <button  *ngIf="onlyId==1" style="margin-bottom:6em" class="btn--add min" (click)="backPage()"> <span class="fas fa-arrow-left"></span> back </button>
+
+
+        </div>
         </article>
 
     <article class="card__only__show__description" >

@@ -21,7 +21,7 @@
   top: 150px;
 }
 .fa-star{
-    animation: colorates 2.5s infinite linear;
+    animation: colorates 1.5s infinite linear;
 }
 @keyframes colorates {
     to{
@@ -134,6 +134,7 @@
 .cards__action__image{
   width: 250px;
   height: auto;
+  border-radius: 5px;
   text-align: center;
   border-radius: 15px;
 }

@@ -73,13 +73,18 @@
 
 }
 .module1 div p{
-  font-family: garamond;
-  font-size: 18px;
+  font-family: couriel;
+  font-size: 19px;
+  color: #eee;
+  line-height: 22px;
+  word-spacing: .3px;
+  letter-spacing: .4px;
 }
 .module1 div h1{
   margin:0;
   color: #ddd;
   font-size: 18px;
+
 }
 .main__title{
   color: white;
