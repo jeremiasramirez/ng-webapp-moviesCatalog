@@ -6,15 +6,28 @@ import { Catalogs } from "../services/service.catalogs"
 @Component({
   selector: 'only-catalog-type',
   templateUrl: './onlycatalogtype.component.html',
-  styleUrls: ['./onlycatalogtype.component.css'],
+  styleUrls: [
+    '../onlyMovie/only.component.css',
+    './onlycatalogtype.component.css',
+    '../home/home.component.css',
+    '../search/search.component.css'
+  ],
   providers: [Catalogs]
 })
 
 
 export class OnlyCatalogTypeComponent{
+  public cards;
+  public onlyId=0;
+  public showCard=1;
+  public only:any=0;
+
+
+
 
   constructor(public navRoute:Router, public param:ActivatedRoute, public catalog:Catalogs){
     this.getParams()
+    setTimeout(()=>{this.showCard=0}, 1400)
   }
 
   getOnlyType(param__:any = -1){
@@ -22,7 +35,7 @@ export class OnlyCatalogTypeComponent{
     if (param__!= -1){
 
       this.catalog.getCatalogs(param__).subscribe((dataCatalog:any)=>{
-        console.log(dataCatalog)
+        this.cards = dataCatalog;
       })
 
     }
@@ -37,5 +50,30 @@ export class OnlyCatalogTypeComponent{
 
   }
 
+  getOnlyCards(id:any){
+
+    if(id){
+
+      this.catalog.getOnlyShow(id).subscribe((data)=>{
+        console.log(data)
+        this.only = data;
+      })
+
+    }
+
+  }
+  goCard(id:any){
+
+    this.getOnlyCards(id);
+    console.log(id)
+    // this.cardHide=1;
+
+    this.onlyId=1;
+
+  }
+  resetWindow(){
+    // this.cardHide=0;
+    this.onlyId=0;
+  }
 
 }
