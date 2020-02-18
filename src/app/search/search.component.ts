@@ -21,7 +21,7 @@ export class SearchComponent{
   public only;
 
   constructor(public router:Router, public param:ActivatedRoute, public catalogs:Catalogs){
-    setTimeout(()=>{this.showCard = 0}, 2000);
+    setTimeout(()=>{this.showCard = 0}, 600);
 
     this.param.params.subscribe((params:any)=>{
       let param_ = params.result;

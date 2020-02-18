@@ -22,21 +22,35 @@
 }
  .comedy{
    background-image: linear-gradient(to bottom, blue, #ddd);
- }
- .terror{
-   background-image: linear-gradient(to top, black, #777);
- }
- .romance{
-   background-image: linear-gradient(to bottom, red, magenta);
- }
- .anime{
-   background-image: linear-gradient(to bottom, yellow, orangered);
- }
- .action{
-   background-image: linear-gradient(to top, pink, #eee);
-   color: #444;
+
+   transition: 1s;
  }
 
+ .terror{
+   background-image: linear-gradient(to top, black, #777);
+
+   transition: 1s;
+ }
+
+ .romance{
+   background-image: linear-gradient(to bottom, red, magenta);
+
+   transition: 1s;
+ }
+
+ .anime{
+   background-image: linear-gradient(to bottom, yellow, orangered);
+
+   transition: 1s;
+ }
+
+ .action{
+   background-image: linear-gradient(to top, pink, #eee);
+   animation: ;
+   color: #444;
+   transition: 1s;
+ }
+ 
 .card__states{
   margin-top: 1em;
   display: flex;

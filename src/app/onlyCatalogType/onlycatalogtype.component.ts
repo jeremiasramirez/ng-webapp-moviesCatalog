@@ -27,7 +27,7 @@ export class OnlyCatalogTypeComponent{
 
   constructor(public navRoute:Router, public param:ActivatedRoute, public catalog:Catalogs){
     this.getParams()
-    setTimeout(()=>{this.showCard=0}, 1400)
+    setTimeout(()=>{this.showCard=0}, 600)
   }
 
   getOnlyType(param__:any = -1){
