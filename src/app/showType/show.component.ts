@@ -12,7 +12,7 @@ import { Router} from "@angular/router";
 export class ShowComponent{
   public showCard = 0;
   constructor(public nav:Router){
-    setTimeout(() => {this.showCard=1}, 700);
+    setTimeout(() => {this.showCard=1}, 900);
   }
 
   goToComedy(){

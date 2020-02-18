@@ -19,7 +19,7 @@ export class HomeComponent{
   constructor(public catalog: Catalogs, public router: Router){
     this.actions();
     this.scrollTo();
-    setTimeout(()=>{this.showCard = 1}, 500);
+    setTimeout(()=>{this.showCard = 1}, 1000);
 
 
   }
