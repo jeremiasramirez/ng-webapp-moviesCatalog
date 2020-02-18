@@ -51,6 +51,7 @@ export class SearchComponent{
   searchShow(response:any){
 
     if (response != ""){
+
       this.router.navigate(["search", response])
 
       this.catalogs.getCatalogs(response).subscribe((data:any)=>{
@@ -66,7 +67,7 @@ export class SearchComponent{
     this.onlyId=1;
     this.showCard=1
 
-    setTimeout(()=>{this.showCard = 0}, 2000);
+    setTimeout(()=>{this.showCard = 0}, 600);
 
     this.catalogs.getOnlyShow(id).subscribe((response:any)=>{
       this.only = response;

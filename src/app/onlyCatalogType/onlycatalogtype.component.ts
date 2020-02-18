@@ -55,7 +55,6 @@ export class OnlyCatalogTypeComponent{
     if(id){
 
       this.catalog.getOnlyShow(id).subscribe((data)=>{
-        console.log(data)
         this.only = data;
       })
 
@@ -65,14 +64,10 @@ export class OnlyCatalogTypeComponent{
   goCard(id:any){
 
     this.getOnlyCards(id);
-    console.log(id)
-    // this.cardHide=1;
-
     this.onlyId=1;
 
   }
   resetWindow(){
-    // this.cardHide=0;
     this.onlyId=0;
   }
 
