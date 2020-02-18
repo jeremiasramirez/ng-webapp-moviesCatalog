@@ -62,14 +62,14 @@ export class SearchComponent{
   }
 
   goCard(id:any){
-    console.log(id);
+
     this.onlyId=1;
     this.showCard=1
+
     setTimeout(()=>{this.showCard = 0}, 2000);
+
     this.catalogs.getOnlyShow(id).subscribe((response:any)=>{
       this.only = response;
-      console.log(this.only )
-
     })
 
   }

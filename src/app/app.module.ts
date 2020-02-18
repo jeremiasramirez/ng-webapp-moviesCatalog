@@ -12,6 +12,7 @@ import {  SearchComponent } from "./search/search.component"
 import {  ShowComponent } from "./showType/show.component"
 import {  OnlyComponent } from "./onlyMovie/only.component"
 import { CutText } from "./pipes/pipe.cutText"
+import { OnlyCatalogTypeComponent } from "./onlyCatalogType/onlycatalogtype.component"
 
 // routing
 import {  routingMovie } from "./app.route"
@@ -25,7 +26,8 @@ import {  routingMovie } from "./app.route"
     ShowComponent,
     SearchComponent,
     OnlyComponent,
-    CutText
+    CutText,
+    OnlyCatalogTypeComponent
 
   ],
   imports: [

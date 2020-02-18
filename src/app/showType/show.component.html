@@ -3,30 +3,30 @@
 <section class="card__states in ">
 
 
-    <div class="blurtime state comedy" >
+    <div (click)="goToComedy()" class="blurtime state comedy" >
         <p>Comedy</p>
         <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
     </div>
 
-    <div class="blurtime state terror">
+    <div (click)="goToTerror()" class="blurtime state terror">
         <p>Terror</p>
         <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
 
     </div>
 
-    <div class="blurtime state romance">
+    <div (click)="goToRomance()" class="blurtime state romance">
         <p>Romance</p>
         <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
 
     </div>
 
-    <div class="blurtime state anime">
+    <div (click)="goToAnime()" class="blurtime state anime">
         <p>Anime</p>
         <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
 
     </div>
 
-    <div class="blurtime state action">
+    <div (click)="goToAction()" class="blurtime state action">
         <p>Action</p>
         <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
 

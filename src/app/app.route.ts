@@ -9,7 +9,7 @@ import { InitComponent } from "./init/init.component"
 import {  SearchComponent } from "./search/search.component"
 import {  ShowComponent } from "./showType/show.component"
 import {  OnlyComponent } from "./onlyMovie/only.component"
-
+import { OnlyCatalogTypeComponent } from "./onlyCatalogType/onlycatalogtype.component"
 
 const ROUTES : Routes = [
   {
@@ -34,7 +34,7 @@ const ROUTES : Routes = [
   },
   {
     path: "navigate/:type",
-    component: ShowComponent
+    component: OnlyCatalogTypeComponent
   },
   {
     path: '',
