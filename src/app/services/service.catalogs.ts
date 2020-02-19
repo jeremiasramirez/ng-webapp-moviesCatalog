@@ -14,6 +14,7 @@ export class Catalogs {
     let urlLocal :string= this.httpUrl + name;
     return this.http.get(urlLocal)
   }
+
   getOnlyShow(id:number=0){
 
     if ( id != 0 ){
