@@ -64,7 +64,7 @@
 
           <h1 class="main__title">Description</h1>
           <div class="">
-              <p>{{only.summary}}</p>
+              <p>{{only.summary | cutText}}</p>
               <p *ngIf="!only.summary">not available</p>
           </div>
 
