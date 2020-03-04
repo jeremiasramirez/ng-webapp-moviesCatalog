@@ -18,6 +18,9 @@ import { OnlyCatalogTypeComponent } from "./onlyCatalogType/onlycatalogtype.comp
 import {  routingMovie } from "./app.route";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
+
+// material
+import {  MatButtonModule } from "@angular/material/button"
 @NgModule({
   declarations: [
 
@@ -37,7 +40,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     HttpClientModule,
     routingMovie,
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule
 
   ],
   providers: [],

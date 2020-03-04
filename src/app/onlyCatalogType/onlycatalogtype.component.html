@@ -3,9 +3,7 @@
 <br>
 <br> -->
 <!-- <h1 class="title text--blue in">Search <span class="fas fa-search text--red"></span> </h1> -->
-<div class="responsive inTop">
-  <span class="fas fa-circle-notch"></span>
-</div>
+
 
 
 
@@ -13,11 +11,11 @@
 
   <article class="cards__action" *ngFor="let action of cards">
 
-      <div class="card__border blurtime"  *ngIf="action.show.image.original &&showCard==0" >
+      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" >
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
-        <button class="btn--add min" (click)="goCard(action.show.id)">Show catalog <span class="fas fa-arrow-right"></span></button>
+        <button class="btn--add min" (click)="goCard(action.show.id)" mat-button>Show catalog <span class="fas fa-arrow-right"></span></button>
       </div>
 
         <span class="fas fa-circle-notch"  *ngIf="showCard==1"></span>

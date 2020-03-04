@@ -37,7 +37,9 @@
 
    transition: 1s;
  }
-
+div button{
+  margin-top: 15px;
+}
  .anime{
    background-image: linear-gradient(to bottom, yellow, orangered);
 
@@ -50,7 +52,7 @@
    color: #444;
    transition: 1s;
  }
- 
+
 .card__states{
   margin-top: 1em;
   display: flex;

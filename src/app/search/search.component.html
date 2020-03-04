@@ -3,7 +3,7 @@
 
 <form class="form in">
   <input class="large" [value]="textInput" #inputSearch type="search" name="search" (keyup.enter)="searchShow(inputSearch.value)" placeholder="Search your catalog">
-  <button type="button" (click)="searchShow(inputSearch.value)" class="btn--add minmin">Search</button>
+  <button type="button" (click)="searchShow(inputSearch.value)" class="btn--add minmin" mat-raised-button>Search</button>
 </form>
 
 
@@ -13,7 +13,7 @@
 
 
 <div class="responsive in" *ngIf="showButtonNavigateBetweenPage==0">
-  <button class="navigate__button" (click)="redirectToNavigate()">Navigate <span class="fas fa-paper-plane"></span></button>
+  <button class="navigate__button" (click)="redirectToNavigate()" mat-button>Navigate <span class="fas fa-paper-plane"></span></button>
 </div>
 
 
@@ -71,7 +71,7 @@
 
           <h1 class="main__title">Description</h1>
           <div class="">
-              <p>{{only.summary}}</p>
+              <p>{{only.summary | cutText:2}}</p>
               <p *ngIf="!only.summary">not available</p>
           </div>
 

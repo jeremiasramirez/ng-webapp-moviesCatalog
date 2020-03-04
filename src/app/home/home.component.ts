@@ -41,7 +41,10 @@ export class HomeComponent{
   }
 
   redirectToNavigate(){
-    this.router.navigate(["navigate"])
+    setTimeout(() => {
+      this.router.navigate(["navigate"])
+    }, 500);
+
   }
 
   showCardOnly(id:number=0){
