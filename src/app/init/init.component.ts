@@ -82,7 +82,10 @@ export class InitComponent{
 
 
   navigateToHome(){
-    this.navigate.navigate(["home"]);
+    setTimeout(() => {
+      this.navigate.navigate(["home"]);
+    }, 400);
+
   }
 
 

@@ -16,19 +16,19 @@ export class ShowComponent{
   }
 
   goToComedy(){
-    this.nav.navigate(["navigate", "comedy"])
+    setTimeout(()=>{this.nav.navigate(["navigate", "comedy"])},400)
   }
   goToRomance(){
-    this.nav.navigate(["navigate", "romance"])
+    setTimeout(()=>{this.nav.navigate(["navigate", "romance"])},400)
   }
   goToAnime(){
-    this.nav.navigate(["navigate", "anime"])
+    setTimeout(()=>{this.nav.navigate(["navigate", "anime"])},400)
   }
   goToTerror(){
-    this.nav.navigate(["navigate", "terror"])
+    setTimeout(()=>{this.nav.navigate(["navigate", "terror"])},400)
   }
   goToAction(){
-    this.nav.navigate(["navigate", "action"])
+    setTimeout(()=>{this.nav.navigate(["navigate", "action"])},400)
   }
 
 

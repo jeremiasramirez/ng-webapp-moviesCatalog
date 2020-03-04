@@ -1,34 +1,36 @@
 
-<h1 class="title text--red">Types of show</h1>
-<section class="card__states in ">
+<h1 class="title text--red in">Types of show</h1>
+<section class="card__states inBottom ">
 
 
-    <div (click)="goToComedy()" class="blurtime state comedy" >
-        <p>Comedy</p>
-        <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
-    </div>
-
-    <div (click)="goToTerror()" class="blurtime state terror">
-        <p>Terror</p>
-        <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
+    <div (click)="goToComedy()" class="state comedy"  >
+      <!-- <span class="fas fa-circle-notch" *ngIf="showCard==0"></span> -->
+        <button mat-button>Comedy</button>
 
     </div>
 
-    <div (click)="goToRomance()" class="blurtime state romance">
-        <p>Romance</p>
-        <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
+    <div (click)="goToTerror()" class="state terror">
+      <!-- <span class="fas fa-circle-notch" *ngIf="showCard==0"></span> -->
+        <button mat-button>Terror</button>
+
 
     </div>
 
-    <div (click)="goToAnime()" class="blurtime state anime">
-        <p>Anime</p>
-        <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
+    <div (click)="goToRomance()" class="state romance">
+        <button mat-button>Romance</button>
+        <!-- <span class="fas fa-circle-notch" *ngIf="showCard==0"></span> -->
 
     </div>
 
-    <div (click)="goToAction()" class="blurtime state action">
-        <p>Action</p>
-        <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
+    <div (click)="goToAnime()" class="state anime">
+        <button mat-button>Anime</button>
+        <!-- <span class="fas fa-circle-notch" *ngIf="showCard==0"></span> -->
+
+    </div>
+
+    <div (click)="goToAction()" class="state action">
+        <button mat-button>Action</button>
+        <!-- <span class="fas fa-circle-notch" *ngIf="showCard==0"></span> -->
 
     </div>
 

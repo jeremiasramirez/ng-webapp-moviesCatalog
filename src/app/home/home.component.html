@@ -1,14 +1,14 @@
 
-<h1 class="title text--blue in">Action <span class="fas fa-star text--red"></span> </h1>
+<h1 class="title text--blue inTop">Action <span class="fas fa-star text--red"></span> </h1>
 <section class="cards__action__container in">
 
-  <article class="cards__action" *ngFor="let action of actionCard | slice:0:4">
+  <article class="cards__action inBottom" *ngFor="let action of actionCard | slice:0:4">
 
-      <div class="card__border blurtime"  *ngIf="showCard==1">
+      <div class="card__border"  *ngIf="showCard==1">
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" alt="poster" class="cards__action__image">
-        <button class="btn--add min" (click)="showCardOnly(action.show.id)" *ngIf="showCard==1">Show catalog <span class="fas fa-arrow-right"></span></button>
+        <button class="btn--add min" mat-raised-button (click)="showCardOnly(action.show.id)" *ngIf="showCard==1">Show catalog <span class="fas fa-arrow-right"></span></button>
       </div>
 
         <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
@@ -19,6 +19,6 @@
 
 
 
-<div class="responsive in" *ngIf="showCard==1">
-  <button class="navigate__button" (click)="redirectToNavigate()">Navigate <span class="fas fa-paper-plane"></span></button>
+<div class="responsive inBottom" *ngIf="showCard==1">
+  <button class="navigate__button" (click)="redirectToNavigate()" mat-button>Navigate <span class="fas fa-paper-plane"></span></button>
 </div>

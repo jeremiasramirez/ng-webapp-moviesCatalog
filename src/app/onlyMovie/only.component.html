@@ -9,8 +9,8 @@
   <article class="card__only__show__module1" >
       <!-- <h1>{{only.name}}</h1> -->
       <img class="in" [src]="only.image.original" alt="poster show" class="image__original">
-      <div class="">
-        <button type="button" name="button" class="btn--add min" (click)="backPage()"> <span style="margin:0;padding:0" class="fas fa-arrow-left"></span> Back</button>
+      <div   >
+        <button mat-raised-button type="button" name="button" class="btn--error min"  (click)="backPage()" > <span style="margin:0;padding:0" class="fas fa-arrow-left"></span> Back</button>
 
       </div>
   </article>
@@ -21,7 +21,7 @@
 
         <h1 class="main__title">Description</h1>
         <div class="">
-            <p>{{only.summary}}</p>
+            <p>{{only.summary | cutText}}</p>
             <p *ngIf="!only.summary">not available</p>
         </div>
 
