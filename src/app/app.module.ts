@@ -15,7 +15,8 @@ import { CutText } from "./pipes/pipe.cutText"
 import { OnlyCatalogTypeComponent } from "./onlyCatalogType/onlycatalogtype.component"
 
 // routing
-import {  routingMovie } from "./app.route"
+import {  routingMovie } from "./app.route";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {  routingMovie } from "./app.route"
     FormsModule,
     HttpClientModule,
     routingMovie,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],

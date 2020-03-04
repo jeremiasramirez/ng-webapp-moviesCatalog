@@ -21,10 +21,10 @@ export class HomeComponent{
     this.scrollTo();
     setTimeout(()=>{this.showCard = 1}, 1000);
 
-    
+
   }
   actions(){
-    this.catalog.getCatalogs().subscribe((data:any)=>{
+    this.catalog.getCatalogs("romance").subscribe((data:any)=>{
         this.actionCard = data;
     })
   }

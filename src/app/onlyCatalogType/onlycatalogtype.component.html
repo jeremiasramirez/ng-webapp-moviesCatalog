@@ -3,8 +3,8 @@
 <br>
 <br> -->
 <!-- <h1 class="title text--blue in">Search <span class="fas fa-search text--red"></span> </h1> -->
-<div class="alert--success in">
-    Result
+<div class="responsive inTop">
+  <span class="fas fa-circle-notch"></span>
 </div>
 
 
@@ -66,7 +66,7 @@
 
           <h1 class="main__title">Description</h1>
           <div class="">
-              <p>{{only.summary | cutText:0:2}}</p>
+              <p>{{only.summary}}</p>
               <p *ngIf="!only.summary">not available</p>
           </div>
 

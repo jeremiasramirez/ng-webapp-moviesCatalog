@@ -21,7 +21,7 @@
   top: 150px;
 }
 .fa-star{
-    animation: colorates 1.5s infinite linear;
+    animation: colorates 3s infinite linear;
 }
 @keyframes colorates {
     to{
