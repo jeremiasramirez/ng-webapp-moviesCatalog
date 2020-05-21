@@ -10,7 +10,9 @@
 
 <br>
 <br>
-
+<div class="responsive in inOut" style="margin-top: 0px"  *ngIf="spinner.off">
+  <mat-spinner  color="primary"></mat-spinner>
+</div>
 
 <div class="responsive in" *ngIf="showButtonNavigateBetweenPage==0">
   <button  (click)="redirectToNavigate()"  matRipple matRippleUnbounded="true" matRippleRadius="100" mat-button>Navigate <span class="fas fa-paper-plane"></span></button>
@@ -28,9 +30,11 @@
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
       </div>
-
-        <span class="fas fa-circle-notch"  *ngIf="showCard==1"></span>
-
+ 
+       <!-- <div class="responsive in inOut" style="margin-top: 0px"  *ngIf="showCard==1">
+          <mat-spinner  color="primary"></mat-spinner>
+        </div>
+-->
   </article>
 
 </section>

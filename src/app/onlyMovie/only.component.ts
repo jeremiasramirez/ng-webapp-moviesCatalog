@@ -6,13 +6,15 @@ import { ActivatedRoute } from "@angular/router"
 @Component({
   selector: 'only-app',
   templateUrl: './only.component.html',
-  styleUrls: ['./only.component.css'],
+  styleUrls: ['./only.component.css', '../styles/general.css'],
   providers: [Catalogs]
 })
 
 export class OnlyComponent{
   public only : any;
-
+  public spinner={
+    off:true
+  }
   public showCard;
   constructor(public catalog: Catalogs, public param:ActivatedRoute){
 
@@ -28,7 +30,7 @@ export class OnlyComponent{
     if (id != 0){
       this.catalog.getOnlyShow(id).subscribe((response:any)=>{
         this.only = response;
-      })
+      }, (err)=>{return err}, ()=>{this.spinner.off=false})
     }
   }
   backPage(){

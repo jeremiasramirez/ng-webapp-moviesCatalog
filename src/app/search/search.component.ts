@@ -17,7 +17,9 @@ import { timer } from 'rxjs';
 
 export class SearchComponent{
 
-
+  public spinner : any ={
+    off:null
+  }
   public showCard: number = 1;
   public cards : Object;
   public textInput : any = "";
@@ -57,12 +59,13 @@ export class SearchComponent{
   searchShow(response:any){
 
     if (response != ""){
-
+      this.spinner.off=true
       this.router.navigate(["search", response])
 
       this.catalogs.getCatalogs(response).pipe(delay(1000)).subscribe((data:any)=>{
         this.cards = data;
-      })
+        
+      }, (err)=>{return err}, ()=>{this.spinner.off=false})
 
     }
 

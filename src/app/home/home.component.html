@@ -1,4 +1,8 @@
 
+  <div class="responsive in inOut" style="margin-top: 0px" *ngIf="spinner.off">
+    <mat-spinner  color="primary"></mat-spinner>
+  </div>
+
 <h1 class="title text--blue inTop">Action <span class="fas fa-star text--red"></span> </h1>
 <section class="cards__action__container in">
 
@@ -10,7 +14,10 @@
         <img [src]="action.show.image.original" alt="poster" class="cards__action__image">
        </div>
 
-        <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
+       <div class="responsive in inOut" style="margin-top: 0px" *ngIf="spinner.off">
+        <mat-spinner  color="primary"></mat-spinner>
+      </div>
+    
 
   </article>
 

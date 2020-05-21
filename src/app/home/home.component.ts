@@ -7,7 +7,7 @@ import { delay } from 'rxjs/operators';
 @Component({
   selector: 'home-app',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.css' , '../styles/general.css'],
   providers: [Catalogs]
 })
 
@@ -16,8 +16,12 @@ export class HomeComponent{
   public actionCard: any[] = []
   public comedyCard :any[] = []
   public showCard : number = 0;
+  public spinner = {
+    off:true
+  }
 
   constructor(public catalog: Catalogs, public router: Router){
+
     this.actions();
     this.scrollTo();
     setTimeout(()=>{this.showCard = 1}, 1000);
@@ -27,6 +31,8 @@ export class HomeComponent{
   actions(){
     this.catalog.getCatalogs("romance").pipe(delay(1000)).subscribe((data:any)=>{
         this.actionCard = data;
+    }, (err)=>{return err}, ()=>{
+      this.spinner.off=false
     })
   }
 
