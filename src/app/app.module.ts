@@ -21,6 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 // material
 import {  MatButtonModule } from "@angular/material/button"
+import { MatRippleModule } from "@angular/material/core"
+
+
 @NgModule({
   declarations: [
 
@@ -41,7 +44,8 @@ import {  MatButtonModule } from "@angular/material/button"
     routingMovie,
     CommonModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatRippleModule
 
   ],
   providers: [],

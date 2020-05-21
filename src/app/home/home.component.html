@@ -4,12 +4,11 @@
 
   <article class="cards__action inBottom" *ngFor="let action of actionCard | slice:0:4">
 
-      <div class="card__border"  *ngIf="showCard==1">
+      <div class="card__border"  *ngIf="showCard==1" (click)="showCardOnly(action.show.id)" matRipple matRippleUnbounded="true">
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" alt="poster" class="cards__action__image">
-        <button class="btn--add min" mat-raised-button (click)="showCardOnly(action.show.id)" *ngIf="showCard==1">Show catalog <span class="fas fa-arrow-right"></span></button>
-      </div>
+       </div>
 
         <span class="fas fa-circle-notch" *ngIf="showCard==0"></span>
 
@@ -20,5 +19,5 @@
 
 
 <div class="responsive inBottom" *ngIf="showCard==1">
-  <button class="navigate__button" (click)="redirectToNavigate()" mat-button>Navigate <span class="fas fa-paper-plane"></span></button>
+  <button class="navigate__button"   (click)="redirectToNavigate()" mat-button>Navigate <span class="fas fa-paper-plane"></span></button>
 </div>
