@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Catalogs } from "../services/service.catalogs"
+import { delay } from 'rxjs/operators';
+import { timer } from 'rxjs';
 
 
 @Component({
@@ -34,7 +36,7 @@ export class OnlyCatalogTypeComponent{
 
     if (param__!= -1){
 
-      this.catalog.getCatalogs(param__).subscribe((dataCatalog:any)=>{
+      this.catalog.getCatalogs(param__).pipe(delay(100)).subscribe((dataCatalog:any)=>{
         this.cards = dataCatalog;
       })
 
@@ -63,8 +65,10 @@ export class OnlyCatalogTypeComponent{
   }
   goCard(id:any){
 
+   timer(100).subscribe(()=>{ 
     this.getOnlyCards(id);
     this.onlyId=1;
+  })
 
   }
   resetWindow(){

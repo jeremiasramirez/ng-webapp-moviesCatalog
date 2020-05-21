@@ -11,12 +11,11 @@
 
   <article class="cards__action" *ngFor="let action of cards">
 
-      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" >
+      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" matRipple matRippleUnbounded="true" matRippleRadius="100" >
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
-        <img [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
-        <button class="btn--add min" (click)="goCard(action.show.id)" mat-button>Show catalog <span class="fas fa-arrow-right"></span></button>
-      </div>
+        <img (click)="goCard(action.show.id)" [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
+        </div>
 
         <span class="fas fa-circle-notch"  *ngIf="showCard==1"></span>
 

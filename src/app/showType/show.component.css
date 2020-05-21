@@ -16,7 +16,7 @@
 
 }
 .state:hover{
-  transform: translateY(-10px);
+  transform: translateY(-1px);
   transition: .5s;
   opacity: .8;
 }
@@ -64,6 +64,9 @@ div button{
   color: black;
   animation: rotateCircle 1.4s infinite linear;
   transition: 1s;
+   
+  position: relative;
+  top: 10px;
   /* position: relative; */
   /* top: 150px; */
 }
