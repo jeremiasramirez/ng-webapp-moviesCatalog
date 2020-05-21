@@ -23,7 +23,7 @@
     "@angular/router": "~9.0.0",
     "jeremias-button": "^1.2.1",
     "jeremias-easydom": "^1.0.1",
-    "jeremias-lib": "^1.2.8",
+    "jeremias-lib": "^1.4.9",
     "jeremias-menu": "^1.0.1",
     "jeremias-theme": "^1.0.0",
     "rxjs": "~6.5.4",
