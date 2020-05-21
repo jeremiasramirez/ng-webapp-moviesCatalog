@@ -2,10 +2,16 @@ import { Component } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router"
 import { Catalogs } from "../services/service.catalogs"
 import { delay} from 'rxjs/operators'
+import { timer } from 'rxjs';
+ 
 @Component({
   selector: 'search-app',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css', '../home/home.component.css','../onlyMovie/only.component.css'],
+  styleUrls: [
+    './search.component.css',
+    '../home/home.component.css',
+    '../styles/general.css',
+    '../onlyMovie/only.component.css'],
   providers: [Catalogs]
 })
 
@@ -67,7 +73,10 @@ export class SearchComponent{
     this.onlyId=1;
     this.showCard=1
  
-    setTimeout(()=>{this.showCard = 0}, 600);
+    timer(1000).subscribe(()=>{
+      this.showCard = 0
+      
+    });
 
     this.catalogs.getOnlyShow(id).subscribe((response:any)=>{
       this.only = response;

@@ -1,9 +1,9 @@
 <div *ngIf="onlyId==0">
 
 
-<form class="form inBottom">
+<form class="form">
   <input class="large" [value]="textInput" #inputSearch type="search" name="search" (keyup.enter)="searchShow(inputSearch.value)" placeholder="Search your catalog">
-  <button type="button" (click)="searchShow(inputSearch.value)" class="minmin" mat-stroked-button>Search</button>
+  <button type="button" (click)="searchShow(inputSearch.value)" class="minmin" mat-stroked-button>Search <span class="fas fa-search"></span></button>
 </form>
 
 
@@ -13,7 +13,7 @@
 
 
 <div class="responsive in" *ngIf="showButtonNavigateBetweenPage==0">
-  <button class="navigate__button" (click)="redirectToNavigate()"  matRipple matRippleUnbounded="true" matRippleRadius="100">Navigate <span class="fas fa-paper-plane"></span></button>
+  <button  (click)="redirectToNavigate()"  matRipple matRippleUnbounded="true" matRippleRadius="100" mat-button>Navigate <span class="fas fa-paper-plane"></span></button>
 </div>
 
 
@@ -23,11 +23,10 @@
 
   <article class="cards__action" *ngFor="let action of cards">
 
-      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" >
+      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" matRipple (click)="goCard(action.show.id)">
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
-        <button class="btn--add min" (click)="goCard(action.show.id)">Show catalog <span class="fas fa-arrow-right"></span></button>
       </div>
 
         <span class="fas fa-circle-notch"  *ngIf="showCard==1"></span>
@@ -46,7 +45,7 @@
 <div style="margin-top: 0px" class="in" *ngIf="onlyId==1">
 
     <div class="responsive in" style="margin-top: 0px"  *ngIf="showCard==1">
-      <span class="fas fa-circle-notch" ></span>
+      <mat-spinner class="inOut" color="primary"></mat-spinner>
     </div>
 
 
@@ -59,7 +58,7 @@
         <img class="in" style="border-radius:5px;" [src]="only.image.original" alt="poster show" class="image__original">
         <div class="">
           <!-- back page -->
-          <button  *ngIf="onlyId==1" style="margin-bottom:6em" class="btn--add min" (click)="backPage()"> <span class="fas fa-arrow-left"></span> back </button>
+          <button  *ngIf="onlyId==1" style="margin-bottom:6em" mat-button class="min" (click)="backPage()"> <span class="fas fa-arrow-left"></span> back </button>
 
 
         </div>

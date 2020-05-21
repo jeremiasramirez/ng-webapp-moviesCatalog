@@ -30,7 +30,8 @@
               "node_modules/jeremias-easydom/easydom.css",
               "src/assets/fontawesome/css/all.min.css",
               "node_modules/jeremias-theme/css/jeremias-theme.css",
-              "node_modules/jeremias-menu/css/jeremias-menu.css"
+              "node_modules/jeremias-menu/css/jeremias-menu.css",
+              "node_modules/jeremias-button/css/jeremias-button.css"
             ],
             "scripts": [
               "node_modules/jeremias-easydom/easydom.js"
