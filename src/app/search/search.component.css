@@ -19,14 +19,4 @@ form input:hover{
   padding:0;
   /* color: orangered; */
 }
-.inOut{
-  animation: outs 1s linear;
-}
-@keyframes outs{
-  from{
-      transform: scale(0)
-  }
-  to{
-      transform: scale(.5)
-  }
-}
+ 
