@@ -22,7 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 // material
 import {  MatButtonModule } from "@angular/material/button"
 import { MatRippleModule } from "@angular/material/core"
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,8 @@ import { MatRippleModule } from "@angular/material/core"
     CommonModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatRippleModule
+    MatRippleModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],

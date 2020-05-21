@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Catalogs } from "../services/service.catalogs"
 import { Router } from "@angular/router"
+import { delay } from 'rxjs/operators';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class HomeComponent{
 
   }
   actions(){
-    this.catalog.getCatalogs("romance").subscribe((data:any)=>{
+    this.catalog.getCatalogs("romance").pipe(delay(1000)).subscribe((data:any)=>{
         this.actionCard = data;
     })
   }

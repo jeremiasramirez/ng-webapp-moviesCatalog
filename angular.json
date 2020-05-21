@@ -29,7 +29,8 @@
               "node_modules/jeremias-lib/css/jeremias-lib.css",
               "node_modules/jeremias-easydom/easydom.css",
               "src/assets/fontawesome/css/all.min.css",
-              "node_modules/jeremias-theme/css/jeremias-theme.css"
+              "node_modules/jeremias-theme/css/jeremias-theme.css",
+              "node_modules/jeremias-menu/css/jeremias-menu.css"
             ],
             "scripts": [
               "node_modules/jeremias-easydom/easydom.js"

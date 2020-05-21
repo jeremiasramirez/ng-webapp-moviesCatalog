@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router"
 import { Catalogs } from "../services/service.catalogs"
-
+import { delay} from 'rxjs/operators'
 @Component({
   selector: 'search-app',
   templateUrl: './search.component.html',
@@ -54,7 +54,7 @@ export class SearchComponent{
 
       this.router.navigate(["search", response])
 
-      this.catalogs.getCatalogs(response).subscribe((data:any)=>{
+      this.catalogs.getCatalogs(response).pipe(delay(1000)).subscribe((data:any)=>{
         this.cards = data;
       })
 
@@ -63,10 +63,10 @@ export class SearchComponent{
   }
 
   goCard(id:any){
-
+    
     this.onlyId=1;
     this.showCard=1
-
+ 
     setTimeout(()=>{this.showCard = 0}, 600);
 
     this.catalogs.getOnlyShow(id).subscribe((response:any)=>{

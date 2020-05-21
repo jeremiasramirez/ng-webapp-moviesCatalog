@@ -4,7 +4,7 @@
 
   <article class="cards__action inBottom" *ngFor="let action of actionCard | slice:0:4">
 
-      <div class="card__border"  *ngIf="showCard==1" (click)="showCardOnly(action.show.id)" matRipple matRippleUnbounded="true">
+      <div class="card__border"  *ngIf="showCard==1" (click)="showCardOnly(action.show.id)" matRipple >
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" alt="poster" class="cards__action__image">

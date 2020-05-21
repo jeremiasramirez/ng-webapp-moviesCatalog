@@ -1,9 +1,9 @@
 <div *ngIf="onlyId==0">
 
 
-<form class="form in">
+<form class="form inBottom">
   <input class="large" [value]="textInput" #inputSearch type="search" name="search" (keyup.enter)="searchShow(inputSearch.value)" placeholder="Search your catalog">
-  <button type="button" (click)="searchShow(inputSearch.value)" class="btn--add minmin" mat-raised-button>Search</button>
+  <button type="button" (click)="searchShow(inputSearch.value)" class="minmin" mat-stroked-button>Search</button>
 </form>
 
 
@@ -13,7 +13,7 @@
 
 
 <div class="responsive in" *ngIf="showButtonNavigateBetweenPage==0">
-  <button class="navigate__button" (click)="redirectToNavigate()" mat-button>Navigate <span class="fas fa-paper-plane"></span></button>
+  <button class="navigate__button" (click)="redirectToNavigate()"  matRipple matRippleUnbounded="true" matRippleRadius="100">Navigate <span class="fas fa-paper-plane"></span></button>
 </div>
 
 
@@ -23,7 +23,7 @@
 
   <article class="cards__action" *ngFor="let action of cards">
 
-      <div class="card__border blurtime"  *ngIf="action.show.image.original &&showCard==0" >
+      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" >
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
