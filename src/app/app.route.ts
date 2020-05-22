@@ -39,6 +39,10 @@ const ROUTES : Routes = [
   {
     path: '',
     component: InitComponent
+  },
+  {
+    path: '**',
+    component: InitComponent
   }
 ]
 

@@ -2,3 +2,24 @@
 .menu--black{
     margin-bottom: 0;;
 }
+
+.sizein{
+    font-weight: 500;
+    word-spacing: .3px;
+    font-size:12px;
+}
+.responsive__submenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ 
+    margin-left: -15px;
+    
+}
+.responsive__submenu *{
+    font-size: 10px;
+    font-family: roboto;
+    width: 300px;
+    margin-bottom: 5px;
+     
+}

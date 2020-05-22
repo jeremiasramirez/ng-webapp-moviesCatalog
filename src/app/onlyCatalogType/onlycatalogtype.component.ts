@@ -12,7 +12,8 @@ import { timer } from 'rxjs';
     '../onlyMovie/only.component.css',
     './onlycatalogtype.component.css',
     '../home/home.component.css',
-    '../search/search.component.css'
+    '../search/search.component.css',
+    '../styles/general.css'
   ],
   providers: [Catalogs]
 })
@@ -24,21 +25,23 @@ export class OnlyCatalogTypeComponent{
   public showCard=1;
   public only:any=0;
 
-
+  public spinner = {
+    off:true
+  }
 
 
   constructor(public navRoute:Router, public param:ActivatedRoute, public catalog:Catalogs){
     this.getParams()
-    setTimeout(()=>{this.showCard=0}, 900)
+    setTimeout(()=>{this.showCard=0}, 1000)
   }
 
   getOnlyType(param__:any = -1){
 
     if (param__!= -1){
 
-      this.catalog.getCatalogs(param__).pipe(delay(100)).subscribe((dataCatalog:any)=>{
+      this.catalog.getCatalogs(param__).pipe(delay(1000)).subscribe((dataCatalog:any)=>{
         this.cards = dataCatalog;
-      })
+      }, (err)=>{return err}, ()=>{this.spinner.off=false}) 
 
     }
 

@@ -1,10 +1,21 @@
 <nav class="menu--black" style="margin-top:-30px">
-    <li class="inTop"><a   [routerLinkActive]="['active']" [routerLink]="['/home']">Home</a></li>
-    <li class="inTop"><a   [routerLinkActive]="['active']" [routerLink]="['/search']">Search <span class="fas fa-search text--red"></span> </a></li>
-    <li class="inTop"><a   [routerLinkActive]="['active']" [routerLink]="['/navigate']">Navigate  <span class="fas fa-paper-plane text--red"></span> </a></li>
+    <li class="inTop "><a class="sizein"  [routerLinkActive]="['active']" [routerLink]="['/home']">Home <span class="fas fa-home text--red"></span>  </a></li>
+    <li class="inTop "><a class="sizein"  [routerLinkActive]="['active']" [routerLink]="['/programs']">Programs <span class="fas fa-tv text--red"></span>  </a></li>
+    <li class="inTop "><a  class="sizein" [routerLinkActive]="['active']" [routerLink]="['/navigate']">Explore  <span class="fas fa-paper-plane text--red"></span> </a></li>
 
+    <li class="inTop"><a   class="sizein" [routerLinkActive]="['active']" [routerLink]="['/search']"> Search <span class="fas fa-search text--red">  </span> </a></li>
+    
 </nav>
 <section class="theme--black">
-    <h1>Naruto</h1>
+   
+    <div class="responsive__submenu">
+        <button mat-button>Comedy</button>
+        <button mat-button>Terror</button>
+        <button mat-button>Romance</button>
+        <button mat-button>Action</button>
+        <button mat-button>Comic</button>
+        <button mat-button>Anime</button>
+    </div>
+    
 </section>
 <router-outlet></router-outlet>

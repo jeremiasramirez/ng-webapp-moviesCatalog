@@ -5,7 +5,9 @@
 <!-- <h1 class="title text--blue in">Search <span class="fas fa-search text--red"></span> </h1> -->
 
 
-
+<div class="responsive in inOut" style="margin-top: 0px"  *ngIf="spinner.off">
+  <mat-spinner  color="warn"></mat-spinner>
+</div>
 
 <section class="cards__action__container in">
 
@@ -17,8 +19,9 @@
         <img (click)="goCard(action.show.id)" [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
         </div>
 
-        <span class="fas fa-circle-notch"  *ngIf="showCard==1"></span>
-
+        
+      
+    
   </article>
 
 </section>
@@ -36,10 +39,10 @@
 <!-- ------------- -->
 
 <div style="margin-top: 0px" class="in" *ngIf="onlyId==1">
-
-    <div class="responsive in" style="margin-top: 0px"  *ngIf="showCard==1">
-      <span class="fas fa-circle-notch" ></span>
-    </div>
+  
+  <div class="responsive in inOut" style="margin-top: 0px"  *ngIf="showCard==1">
+    <mat-spinner  color="warn"></mat-spinner>
+  </div>
 
 
 

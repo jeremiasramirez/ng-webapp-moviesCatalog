@@ -8,9 +8,11 @@ import { pluck } from 'rxjs/operators';
 export class Catalogs {
   public httpUrl : string = "http://api.tvmaze.com/search/shows?q=";
   constructor(){
-
+    ajax.get("http://api.tvmaze.com/schedule/full").pipe(pluck('response')).subscribe(data=>{
+      console.log(data)
+    })
   }
-
+ 
   getCatalogs(name:any= "comedy"){
     let urlLocal :string= this.httpUrl + name;
     return ajax.get(urlLocal).pipe(pluck('response'))
