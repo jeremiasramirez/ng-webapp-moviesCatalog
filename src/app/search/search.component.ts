@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from "@angular/router"
 import { Catalogs } from "../services/service.catalogs"
 import { delay} from 'rxjs/operators'
 import { timer } from 'rxjs';
- 
+
 @Component({
   selector: 'search-app',
   templateUrl: './search.component.html',
@@ -21,13 +21,13 @@ export class SearchComponent{
     off:null
   }
   public showCard: number = 1;
-  public cards : Object;
+  public cards : any;
   public textInput : any = "";
   public showMsj : number;
   public showButtonNavigateBetweenPage:number = 0;
   public onlyId=0;
   public only;
-
+  public lenSearch:number;
   constructor(public router:Router, public param:ActivatedRoute, public catalogs:Catalogs){
     setTimeout(()=>{this.showCard = 0}, 1000);
 
@@ -64,21 +64,22 @@ export class SearchComponent{
 
       this.catalogs.getCatalogs(response).pipe(delay(1000)).subscribe((data:any)=>{
         this.cards = data;
-        
-      }, (err)=>{return err}, ()=>{this.spinner.off=false})
+
+
+      }, (err)=>{return err}, ()=>{this.spinner.off=false;  this.lenSearch=this.cards.length})
 
     }
 
   }
 
   goCard(id:any){
-    
+
     this.onlyId=1;
     this.showCard=1
- 
+
     timer(1000).subscribe(()=>{
       this.showCard = 0
-      
+
     });
 
     this.catalogs.getOnlyShow(id).subscribe((response:any)=>{

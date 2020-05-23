@@ -4,8 +4,8 @@
 
 .containerArrow{
   position: absolute;
-  top:25px;
-  right: 0;
+  top:36px;
+  right:  0;
 }
 .containerArrow *{
   color: white;
