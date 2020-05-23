@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movieCatalogs';
+
+  public menu={
+    hidden: false
+  }
+
+  public showMenu(){
+    if (this.menu.hidden==false){
+      this.menu.hidden = true;
+    }
+    else{
+      this.menu.hidden=false
+    }
+
+  }
+
 }

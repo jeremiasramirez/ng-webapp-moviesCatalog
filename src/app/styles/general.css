@@ -1,4 +1,4 @@
-.inOut{
+.inOuts{
     animation: outs 1s linear;
 }
 @keyframes outs{

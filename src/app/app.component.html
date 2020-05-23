@@ -4,18 +4,24 @@
     <li class="inTop "><a  class="sizein" [routerLinkActive]="['active']" [routerLink]="['/navigate']">Explore  <span class="fas fa-paper-plane text--red"></span> </a></li>
 
     <li class="inTop"><a   class="sizein" [routerLinkActive]="['active']" [routerLink]="['/search']"> Search <span class="fas fa-search text--red">  </span> </a></li>
-    
+
 </nav>
 <section class="theme--black">
-   
-    <div class="responsive__submenu">
-        <button mat-button>Comedy</button>
-        <button mat-button>Terror</button>
-        <button mat-button>Romance</button>
-        <button mat-button>Action</button>
-        <button mat-button>Comic</button>
-        <button mat-button>Anime</button>
+
+    <div class="responsive__submenu in" *ngIf="menu.hidden" >
+        <button mat-button class="inTop">Comedy</button>
+        <button mat-button class="inTop">Terror</button>
+        <button mat-button class="inTop">Romance</button>
+        <button mat-button class="inTop">Action</button>
+        <button mat-button class="inTop">Comic</button>
+        <button mat-button class="inTop">Anime</button>
+
     </div>
-    
+
+
 </section>
+<div class="containerArrow" matRipple matRippleUnbounded="true" matRippleCentered="true" matRippleColor="rgba(0%, 0%, 0%, 60%)" matRippleRadius="18" (click)="showMenu()">
+  <strong class="fas fa-arrow-up rotate__submenu" [ngClass]="{'rotate__submenu':menu.hidden}"></strong>
+</div>
+
 <router-outlet></router-outlet>

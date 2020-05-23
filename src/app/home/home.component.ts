@@ -24,12 +24,12 @@ export class HomeComponent{
 
     this.actions();
     this.scrollTo();
-    setTimeout(()=>{this.showCard = 1}, 1000);
+    setTimeout(()=>{this.showCard = 1}, 2000);
 
 
   }
   actions(){
-    this.catalog.getCatalogs("romance").pipe(delay(1000)).subscribe((data:any)=>{
+    this.catalog.getCatalogs("romance").pipe(delay(2000)).subscribe((data:any)=>{
         this.actionCard = data;
     }, (err)=>{return err}, ()=>{
       this.spinner.off=false

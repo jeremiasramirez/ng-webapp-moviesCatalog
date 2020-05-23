@@ -1,9 +1,9 @@
 
-  <div class="responsive in inOut" style="margin-top: 0px" *ngIf="spinner.off">
-    <mat-spinner  color="primary"></mat-spinner>
+  <div class="responsive inOuts" style="margin-top: 0px" *ngIf="spinner.off">
+    <mat-spinner  color="warn"></mat-spinner>
   </div>
 
-<h1 class="title text--blue inTop">Action <span class="fas fa-star text--red"></span> </h1>
+<h1 class="title text--blue inTop" *ngIf="!spinner.off">Action <span class="fas fa-star text--red"></span> </h1>
 <section class="cards__action__container in">
 
   <article class="cards__action inBottom" *ngFor="let action of actionCard | slice:0:4">
@@ -14,17 +14,8 @@
         <img [src]="action.show.image.original" alt="poster" class="cards__action__image">
        </div>
 
-       <div class="responsive in inOut" style="margin-top: 0px" *ngIf="spinner.off">
-        <mat-spinner  color="primary"></mat-spinner>
-      </div>
-    
+
 
   </article>
 
 </section>
-
-
-
-<div class="responsive inBottom" *ngIf="showCard==1">
-  <button class="navigate__button"   (click)="redirectToNavigate()" mat-button>Navigate <span class="fas fa-paper-plane"></span></button>
-</div>
