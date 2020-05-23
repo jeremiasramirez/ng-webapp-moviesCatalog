@@ -15,11 +15,7 @@
   cursor: pointer;
 
 }
-.state:hover{
-  transform: translateY(-1px);
-  transition: .5s;
-  opacity: .8;
-}
+
  .comedy{
    background-image: linear-gradient(to bottom, blue, #ddd);
 

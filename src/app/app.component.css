@@ -1,6 +1,8 @@
- 
 .menu--black{
-    margin-bottom: 0;;
+    margin-bottom: 0;
+ }
+.menu--black li{
+    margin-left: 8px;
 }
 
 .sizein{
