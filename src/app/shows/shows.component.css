@@ -1,0 +1,29 @@
+mat-list-item{
+    border: 1px solid #eee;
+    border-radius: 2px;
+    margin-bottom: 1em;
+}
+.responsiveButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.responsiveIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.responsiveIn *{
+    margin: .5em;
+}
+.sizeCard{
+    width: 290px;
+    
+}
+
+.sizeCard img{
+    transform: scale(.9);
+    width: 285px;
+    margin-left: 4px; 
+}

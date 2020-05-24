@@ -13,7 +13,7 @@
 
   <article class="cards__action" *ngFor="let action of cards">
 
-      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" matRipple matRippleUnbounded="true" matRippleRadius="100" >
+      <div class="card__border"  *ngIf="showCard==0" matRipple matRippleUnbounded="true" matRippleRadius="100" >
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img (click)="goCard(action.show.id)" [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">

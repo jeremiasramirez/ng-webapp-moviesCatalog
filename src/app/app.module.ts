@@ -25,6 +25,8 @@ import { MatRippleModule } from "@angular/material/core"
 import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatBadgeModule} from "@angular/material/badge";
 import { ShowsComponent } from './shows/shows.component';
+import { MatListModule } from "@angular/material/list";
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ShowsComponent } from './shows/shows.component';
     MatButtonModule,
     MatRippleModule,
     MatProgressSpinnerModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatListModule,
+    MatCardModule
 
   ],
   providers: [],

@@ -13,7 +13,7 @@
   </div>
 
   <div class="form responsive" [class]="menu.classTop" *ngIf="menu.hidden">
-    <input type="search" class="input" placeholder="Search" #val > <button mat-stroked-button class="text--red" (click)="redirectToSearch(val.value)"> Ok </button>
+    <input type="search" class="input" placeholder="Search" #val > <button mat-button class="text--red" (click)="redirectToSearch(val.value)"> Ok </button>
   </div>
       <div class="responsive__submenu in" *ngIf="menu.hidden" >
         <button (click)="redirectToExplore('comedy')" mat-button [class]="menu.classTop">Comedy</button>
