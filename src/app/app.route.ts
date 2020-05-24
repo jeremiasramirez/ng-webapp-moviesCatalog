@@ -10,6 +10,7 @@ import {  SearchComponent } from "./search/search.component"
 import {  ShowComponent } from "./showType/show.component"
 import {  OnlyComponent } from "./onlyMovie/only.component"
 import { OnlyCatalogTypeComponent } from "./onlyCatalogType/onlycatalogtype.component"
+import { ShowsComponent } from './shows/shows.component';
 
 const ROUTES : Routes = [
   {
@@ -27,6 +28,10 @@ const ROUTES : Routes = [
   {
     path: "search/:result",
     component: SearchComponent
+  },
+  {
+    path: "shows",
+    component: ShowsComponent
   },
   {
     path: "navigate",

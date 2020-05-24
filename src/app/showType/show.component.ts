@@ -28,7 +28,7 @@ export class ShowComponent{
     setTimeout(()=>{this.nav.navigate(["navigate", "terror"])},400)
   }
   goToAction(){
-    setTimeout(()=>{this.nav.navigate(["navigate", "action"])},400)
+    setTimeout(()=>{this.nav.navigate(["navigate", "actions"])},400)
   }
 
 

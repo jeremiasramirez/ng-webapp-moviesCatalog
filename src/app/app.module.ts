@@ -24,6 +24,7 @@ import {  MatButtonModule } from "@angular/material/button"
 import { MatRippleModule } from "@angular/material/core"
 import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatBadgeModule} from "@angular/material/badge";
+import { ShowsComponent } from './shows/shows.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MatBadgeModule} from "@angular/material/badge";
     SearchComponent,
     OnlyComponent,
     CutText,
-    OnlyCatalogTypeComponent
+    OnlyCatalogTypeComponent,
+    ShowsComponent
 
   ],
   imports: [

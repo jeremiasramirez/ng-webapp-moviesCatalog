@@ -1,56 +1,30 @@
 
 .state{
-  width: 270px;
+  width: inherit;
   height: 70px;
+ 
   text-align: center;
-  border-radius: 5px;
-  /* border: 1px solid red; */
-  color: white;
+ 
+  border: 1px solid #333; 
+  color: #222;
   font-family: monospace;
   font-weight: 600;
-  margin: .5em;
   /* margin-bottom: -2em; */
   line-height: 30px;
   font-size: 14px;
   cursor: pointer;
 
 }
+ 
+ 
 
- .comedy{
-   background-image: linear-gradient(to bottom, blue, #ddd);
-
-   transition: 1s;
- }
-
- .terror{
-   background-image: linear-gradient(to top, black, #777);
-
-   transition: 1s;
- }
-
- .romance{
-   background-image: linear-gradient(to bottom, red, magenta);
-
-   transition: 1s;
- }
-div button{
-  margin-top: 15px;
-}
- .anime{
-   background-image: linear-gradient(to bottom, yellow, orangered);
-
-   transition: 1s;
- }
-
- .action{
-   background-image: linear-gradient(to top, pink, #eee);
-   animation: ;
-   color: #444;
-   transition: 1s;
- }
+ 
 
 .card__states{
-  margin-top: 1em;
+  margin:0;
+  margin-left: -15px;
+  width: 110%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;

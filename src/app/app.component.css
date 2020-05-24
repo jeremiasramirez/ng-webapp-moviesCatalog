@@ -4,11 +4,14 @@
 
 .containerArrow{
   position: absolute;
-  top:36px;
+  top:45px;
   right:  0;
 }
 .containerArrow *{
-  color: white;
+  color: white;  
+}
+.input{
+  color: #333;
 }
 .rotate__submenu{
   transform: rotate(180deg);
@@ -29,7 +32,7 @@
 .responsive__submenu *{
     font-size: 10px;
     font-family: roboto;
-    width: 300px;
+    width: 315px;
     margin-bottom: 5px;
 
 }

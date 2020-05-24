@@ -27,7 +27,7 @@ export class SearchComponent{
   public showButtonNavigateBetweenPage:number = 0;
   public onlyId=0;
   public only;
-  public lenSearch:number;
+ 
   constructor(public router:Router, public param:ActivatedRoute, public catalogs:Catalogs){
     setTimeout(()=>{this.showCard = 0}, 1000);
 
@@ -66,7 +66,7 @@ export class SearchComponent{
         this.cards = data;
 
 
-      }, (err)=>{return err}, ()=>{this.spinner.off=false;  this.lenSearch=this.cards.length})
+      }, (err)=>{return err}, ()=>{this.spinner.off=false;  })
 
     }
 

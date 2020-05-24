@@ -31,7 +31,7 @@ export class HomeComponent{
   actions(){
     this.catalog.getCatalogs("romance").pipe(delay(2000)).subscribe((data:any)=>{
         this.actionCard = data;
-    }, (err)=>{return err}, ()=>{
+    }, (err)=>{console.log(err)}, ()=>{
       this.spinner.off=false
     })
   }
