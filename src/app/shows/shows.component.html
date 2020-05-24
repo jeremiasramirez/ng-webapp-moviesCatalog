@@ -16,11 +16,13 @@
 
 </section>
 -->
-<div class="responsiveIn">
+<div class="responsiveIn" *ngIf="!spinner.off">
 
 
 
-    <mat-card class="sizeCard" matRipple matRippleUnbounded="true" matRippleRadius="110" *ngFor="let show of shows|slice:0:5">
+    <mat-card class="sizeCard" matRipple matRippleUnbounded="true"
+    matRippleCentered="true"
+     matRippleRadius="80" *ngFor="let show of shows|slice:startShow:endShow">
 
         <mat-card-title> {{show.name}}	</mat-card-title>
         <img mat-card-image class="minmin"  src="{{show.image.medium}}">
@@ -30,8 +32,8 @@
 
 </div>
 
-<div class="responsiveButtons">
-    <button   class="btn--red" mat-button> <span class="fas fa-arrow-left"></span> Back</button>
-    <section class="responsiveIn"> 1 of 10 </section>
-    <button   class="btn--green" mat-button>Next <span class="fas fa-arrow-right"></span></button>
+<div class="responsiveButtons" *ngIf="!spinner.off">
+    <button [disabled]="spinner.off" (click)="backPage()"  class="btn--red" mat-button> <span class="fas fa-arrow-left"></span> Back</button>
+    <section class="responsiveIn"> {{startShow+10}} of {{lengthShows}} </section>
+    <button  [disabled]="spinner.off" (click)="nextPage()" class="btn--green" mat-button>Next <span class="fas fa-arrow-right"></span></button>
 </div>

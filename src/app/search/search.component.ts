@@ -20,6 +20,8 @@ export class SearchComponent{
   public spinner : any ={
     off:null
   }
+
+  public option : any = 'show';
   public showCard: number = 1;
   public cards : any;
   public textInput : any = "";
