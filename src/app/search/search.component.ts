@@ -21,28 +21,32 @@ export class SearchComponent{
     off:null
   }
 
-  public option : any = 'show';
+  public option : any = 'people';
   public showCard: number = 1;
   public cards : any;
-  public textInput : any = "";
+  public textInput : any = " ";
   public showMsj : number;
   public showButtonNavigateBetweenPage:number = 0;
   public onlyId=0;
   public only;
- 
+  public peoples : any[]=[];
+
   constructor(public router:Router, public param:ActivatedRoute, public catalogs:Catalogs){
     setTimeout(()=>{this.showCard = 0}, 1000);
 
+
     this.param.params.subscribe((params:any)=>{
+
       let param_ = params.result;
+      this.textInput = param_
 
-      if (param_){
 
-        this.searchShow(param_)
-        this.textInput = param_
-        this.showButtonNavigateBetweenPage=1;
-        this.showMsj=1;
-      }
+
+           this.searchShow(param_)
+           this.showButtonNavigateBetweenPage=1;
+           this.showMsj=1;
+
+
 
 
     })
@@ -59,16 +63,27 @@ export class SearchComponent{
   }
 
   searchShow(response:any){
+    if (this.option === 'show'){
+        this.peoples=[]
+        if (response != ""){
+          this.spinner.off=true
+          this.router.navigate(["search", response])
 
-    if (response != ""){
+          this.catalogs.getCatalogs(response).pipe(delay(1000)).subscribe((data:any)=>{
+          this.cards = data;
+
+          }, (err)=>{return err}, ()=>{this.spinner.off=false;  })
+
+        }
+
+    }
+    else{
+      this.cards = []
       this.spinner.off=true
-      this.router.navigate(["search", response])
-
-      this.catalogs.getCatalogs(response).pipe(delay(1000)).subscribe((data:any)=>{
-        this.cards = data;
-
-
-      }, (err)=>{return err}, ()=>{this.spinner.off=false;  })
+      this.catalogs.getPeople(response).subscribe((resp)=>{
+        this.peoples = resp;
+        console.log(this.peoples)
+      }, (err)=>{return err}, ()=>{this.spinner.off=false})
 
     }
 

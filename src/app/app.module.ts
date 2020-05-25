@@ -27,6 +27,7 @@ import { MatBadgeModule} from "@angular/material/badge";
 import { ShowsComponent } from './shows/shows.component';
 import { MatListModule } from "@angular/material/list";
 import {MatCardModule} from '@angular/material/card';
+ 
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
-<div *ngIf="onlyId==0">
+<div  *ngIf="onlyId==0">
 
 
 <form class="form">
@@ -7,33 +7,44 @@
 </form>
 
 
-<div style="display: flex;justify-content:flex-end;">
+<div style="display: flex;justify-content:flex-end; float:right">
 
-  
-  <form >
+
+  <form  >
     <label for="filter" class="text--black">
-      Show
-      <input [(ngModel)]="option"  type="radio" name="filter" value="show">
+      <span class="text--magenta letter1 ">Shows</span>
+      <input [(ngModel)]="option" style="transform:scale(1.3)"  type="radio" name="filter" value="show">
       <br>
-      People
-      <input [(ngModel)]="option" type="radio" name="filter" value="people">
+      <span class="text--magenta letter1 ">Peoples</span>
+      <input [(ngModel)]="option" style="transform:scale(1.3)" type="radio" name="filter" value="people">
+
     </label>
   </form>
 
 </div>
 
-<p>option {{option}}</p>
 <br>
- 
 <br>
+
 <div class="responsive inOuts" style="margin-top: 0px"  *ngIf="spinner.off">
   <mat-spinner  color="warn"></mat-spinner>
 </div>
+<!-- People cards -->
 
+    <mat-list>
+        <mat-list-item *ngFor="let people of peoples">
+         <img matListAvatar src="{{people.person.image.medium}}" *ngIf="people.person.image.medium" alt="people.person.name">
+        <h3 matLine *ngIf="people.person.name"> {{people.person.name}} </h3>
+
+        </mat-list-item>
+    </mat-list>
+
+
+<!--
 <div class="responsive in" *ngIf="showButtonNavigateBetweenPage==0">
   <button  (click)="redirectToNavigate()"  matRipple matRippleUnbounded="true" matRippleRadius="70" mat-button>Explore <span class="fas fa-paper-plane"></span></button>
 </div>
-
+-->
 
 
 
@@ -47,10 +58,7 @@
         <img [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">
       </div>
 
-       <!-- <div class="responsive in inOut" style="margin-top: 0px"  *ngIf="showCard==1">
-          <mat-spinner  color="primary"></mat-spinner>
-        </div>
--->
+
   </article>
 
 </section>
