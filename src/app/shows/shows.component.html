@@ -3,6 +3,7 @@
     <mat-spinner color="warn"></mat-spinner>
 </div>
 <!--
+
 <section class="responsive" *ngIf="!spinner.off">
 
 
@@ -10,30 +11,32 @@
         <mat-list-item *ngFor="let show of shows|slice:0:5">
         <img matListAvatar src="{{show.image.medium}}" alt="...">
         <h3 matLine> {{show.name}} </h3>
-    
+
         </mat-list-item>
     </mat-list>
 
 </section>
 -->
-<div class="responsiveIn" *ngIf="!spinner.off">
+<div class="responsiveIn" >
 
 
 
-    <mat-card class="sizeCard" matRipple matRippleUnbounded="true"
+    <mat-card class="sizeCard inTop" matRipple matRippleUnbounded="true"
     matRippleCentered="true"
      matRippleRadius="80" *ngFor="let show of shows|slice:startShow:endShow">
 
         <mat-card-title> {{show.name}}	</mat-card-title>
         <img mat-card-image class="minmin"  src="{{show.image.medium}}">
 
+        <div  class="add">
+          <i class="far fa-plus-square" style=""></i>
+        </div>
     </mat-card>
     <br>
 
 </div>
 
-<div class="responsiveButtons" *ngIf="!spinner.off">
+<div class="responsiveButtons">
     <button [disabled]="spinner.off" (click)="backPage()"  class="btn--red" mat-button> <span class="fas fa-arrow-left"></span> Back</button>
-    <section class="responsiveIn"> {{startShow+10}} of {{lengthShows}} </section>
     <button  [disabled]="spinner.off" (click)="nextPage()" class="btn--green" mat-button>Next <span class="fas fa-arrow-right"></span></button>
 </div>

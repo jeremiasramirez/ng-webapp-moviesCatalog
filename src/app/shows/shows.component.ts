@@ -13,45 +13,48 @@ export class ShowsComponent  {
   public shows : any[];
   public lengthShows:any = 'await'
   public startShow:number=0;
+
   public endShow:number=10;
 
   public spinner = {
     off:true
   }
-  constructor(public allShows:Catalogs) { 
+
+  constructor(public allShows:Catalogs) {
+
     this.allShows.getAllShows().pipe(delay(500)).subscribe(resp=>{
       this.shows = resp;
+
     }, (err)=>{return err}, ()=>{this.spinner.off=false; this.lengthShows = (this.shows.length/10)})
+
   }
 
   public nextPage(){
-    
+
 
     if (this.endShow < this.shows.length ){
-
-      this.spinner.off=true;
-      this.startShow+=10;
+ 
+      this.startShow+=10
       this.endShow += 10;
-      
-      timer(800).subscribe(()=>{
-        this.spinner.off=false;
 
-      })
+
     }
+
+
   }
 
   public backPage(){
-   
-    if (this.startShow > 0 ){
-       this.spinner.off=true;
-      this.startShow-=10;
-      this.endShow -= 10;
-      
-      timer(100).subscribe(()=>{
-        this.spinner.off=false;
 
-      })
+    if ( this.startShow > 0 ){
+
+
+       this.startShow-=10;
+       this.endShow -= 10;
+
+
+
     }
+
   }
- 
+
 }

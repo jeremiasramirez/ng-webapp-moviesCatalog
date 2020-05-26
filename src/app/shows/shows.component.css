@@ -19,11 +19,25 @@ mat-list-item{
 }
 .sizeCard{
     width: 290px;
-    
+
 }
 
 .sizeCard img{
     transform: scale(.9);
     width: 285px;
-    margin-left: 4px; 
+    margin-left: 4px;
+}
+
+
+.add{
+ float:right;
+ margin:0;
+ padding:0;
+
+}
+
+.buttonAdd{
+  cursor: pointer;
+  
+  transform:scale(1.3);
 }

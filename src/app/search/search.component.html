@@ -7,7 +7,7 @@
 </form>
 
 
-<div style="display: flex;justify-content:flex-end; float:right">
+<div style="display: flex;justify-content:center;flex-direction:column ">
 
 
   <form  >
@@ -30,16 +30,18 @@
   <mat-spinner  color="warn"></mat-spinner>
 </div>
 <!-- People cards -->
+<section style="display:flex;justify-content:center;">
 
-    <mat-list>
-        <mat-list-item *ngFor="let people of peoples">
-         <img matListAvatar src="{{people.person.image.medium}}" *ngIf="people.person.image.medium" alt="people.person.name">
-        <h3 matLine *ngIf="people.person.name"> {{people.person.name}} </h3>
+
+    <mat-list class="responsivePeople" style="max-width: 700px;">
+        <mat-list-item *ngFor="let people of peoples" class="items"  matRipple>
+         <img matListAvatar src="{{people.person.image.medium}}" *ngIf="people.person.image.original" alt="people.person.name">
+        <h3 matLine *ngIf="people.person.name "> {{people.person.name}} </h3>
 
         </mat-list-item>
     </mat-list>
 
-
+</section>
 <!--
 <div class="responsive in" *ngIf="showButtonNavigateBetweenPage==0">
   <button  (click)="redirectToNavigate()"  matRipple matRippleUnbounded="true" matRippleRadius="70" mat-button>Explore <span class="fas fa-paper-plane"></span></button>
@@ -52,7 +54,7 @@
 
   <article class="cards__action" *ngFor="let action of cards">
 
-      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" matRipple (click)="goCard(action.show.id)">
+      <div class="card__border"  *ngIf="action.show.image.original &&showCard==0" matRipple matRippleColor="rgba(0%, 0%, 0%, 50%)" (click)="goCard(action.show.id)">
 
         <h1 class="cards__action__title">{{action.show.name}}</h1>
         <img [src]="action.show.image.original" style="border-radius:5px" alt="poster" class="cards__action__image">

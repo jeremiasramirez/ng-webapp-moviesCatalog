@@ -16,9 +16,7 @@ export class AppComponent {
     classTop: 'inBottom'
   }
   public redirectToSearch(val:string|number){
-    timer(800).subscribe(timing=>{
-      this.menu.hidden=false
-    })
+    this.menu.hidden=false
     this.router.navigate(["search", val]);
   }
 
@@ -28,8 +26,8 @@ export class AppComponent {
     })
     this.router.navigate(["navigate", val]);
   }
-  
-  
+
+
   public showMenu(){
     if (this.menu.hidden==false){
       this.menu.hidden = true;

@@ -13,10 +13,12 @@ import {  ShowComponent } from "./showType/show.component"
 import {  OnlyComponent } from "./onlyMovie/only.component"
 import { CutText } from "./pipes/pipe.cutText"
 import { OnlyCatalogTypeComponent } from "./onlyCatalogType/onlycatalogtype.component"
-
+import { ListComponent } from './list/list.component';
+import { ShowsComponent } from './shows/shows.component';
 // routing
 import {  routingMovie } from "./app.route";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 
 
 // material
@@ -24,10 +26,10 @@ import {  MatButtonModule } from "@angular/material/button"
 import { MatRippleModule } from "@angular/material/core"
 import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatBadgeModule} from "@angular/material/badge";
-import { ShowsComponent } from './shows/shows.component';
-import { MatListModule } from "@angular/material/list";
 import {MatCardModule} from '@angular/material/card';
- 
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatListModule } from "@angular/material/list";
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import {MatCardModule} from '@angular/material/card';
     OnlyComponent,
     CutText,
     OnlyCatalogTypeComponent,
-    ShowsComponent
+    ShowsComponent,
+    ListComponent
 
   ],
   imports: [
@@ -55,7 +58,8 @@ import {MatCardModule} from '@angular/material/card';
     MatProgressSpinnerModule,
     MatBadgeModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
 
   ],
   providers: [],

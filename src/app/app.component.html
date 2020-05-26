@@ -1,19 +1,19 @@
 <nav class="menu--black" style="margin-top:-30px">
-    <li class="inTop "><a class="sizein"  [routerLinkActive]="['active']" [routerLink]="['/home']">Home <span class="fas fa-home text--red"></span>  </a></li>
-    <li class="inTop "><a class="sizein"  [routerLinkActive]="['active']" [routerLink]="['/shows']">Shows <span class="fas fa-tv text--red"></span>  </a></li>
-    <li class="inTop "><a  class="sizein" [routerLinkActive]="['active']" [routerLink]="['/navigate']">Explore  <span class="fas fa-paper-plane text--red"></span> </a></li>
+    <li class="inTop"  matTooltip="Home" aria-label="Home"><a class="sizein"  [routerLinkActive]="['active']" [routerLink]="['/home']">Home <span class="fas fa-home text--red"></span>  </a></li>
+    <li class="inTop"  matTooltip="Shows" aria-label="Shows"><a class="sizein"  [routerLinkActive]="['active']" [routerLink]="['/shows']">Shows <span class="fas fa-tv text--red"></span>  </a></li>
+    <li class="inTop"  matTooltip="Explore" aria-label="Explore"><a  class="sizein" [routerLinkActive]="['active']" [routerLink]="['/navigate']">Explore  <span class="fas fa-paper-plane text--red"></span> </a></li>
 
-    <li class="inTop"><a   class="sizein" [routerLinkActive]="['active']" [routerLink]="['/search']"> Search <span class="fas fa-search text--red">  </span> </a></li>
+    <li class="inTop"  matTooltip="My list" aria-label="List"><a   class="sizein" [routerLinkActive]="['active']" [routerLink]="['/list']"> List <span class="fas fa-check text--red">  </span> </a></li>
 
 </nav>
 <section class="theme--black">
- 
+
   <div class="responsive" *ngIf="menu.hidden">
     <h1 class="title letter2 text--white">Search</h1>
   </div>
 
   <div class="form responsive" [class]="menu.classTop" *ngIf="menu.hidden">
-    <input type="search" class="input" placeholder="Search" #val > <button mat-button class="text--red" (click)="redirectToSearch(val.value)"> Ok </button>
+    <input type="search" class="input" placeholder="Search" #val  (keyup.enter)="redirectToSearch(val.value)"> <button mat-button class="text--red" (click)="redirectToSearch(val.value)"> Ok </button>
   </div>
       <div class="responsive__submenu in" *ngIf="menu.hidden" >
         <button (click)="redirectToExplore('comedy')" mat-button [class]="menu.classTop">Comedy</button>

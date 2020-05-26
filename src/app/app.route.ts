@@ -11,6 +11,7 @@ import {  ShowComponent } from "./showType/show.component"
 import {  OnlyComponent } from "./onlyMovie/only.component"
 import { OnlyCatalogTypeComponent } from "./onlyCatalogType/onlycatalogtype.component"
 import { ShowsComponent } from './shows/shows.component';
+import { ListComponent } from './list/list.component';
 
 const ROUTES : Routes = [
   {
@@ -40,6 +41,10 @@ const ROUTES : Routes = [
   {
     path: "navigate/:type",
     component: OnlyCatalogTypeComponent
+  },
+  {
+    path: "list",
+    component: ListComponent
   },
   {
     path: '',

@@ -21,10 +21,10 @@ export class SearchComponent{
     off:null
   }
 
-  public option : any = 'people';
+  public option : any = 'show';
   public showCard: number = 1;
   public cards : any;
-  public textInput : any = " ";
+  public textInput : any = '~';
   public showMsj : number;
   public showButtonNavigateBetweenPage:number = 0;
   public onlyId=0;
@@ -38,13 +38,17 @@ export class SearchComponent{
     this.param.params.subscribe((params:any)=>{
 
       let param_ = params.result;
-      this.textInput = param_
+
+      if (param_){
+        this.textInput = param_
+        this.searchShow(param_)
+        this.showButtonNavigateBetweenPage=1;
+        this.showMsj=1;
+      }
 
 
 
-           this.searchShow(param_)
-           this.showButtonNavigateBetweenPage=1;
-           this.showMsj=1;
+
 
 
 
@@ -80,6 +84,7 @@ export class SearchComponent{
     else{
       this.cards = []
       this.spinner.off=true
+      this.router.navigate(["search", response])
       this.catalogs.getPeople(response).subscribe((resp)=>{
         this.peoples = resp;
         console.log(this.peoples)
