@@ -13,8 +13,9 @@ import {  ShowComponent } from "./showType/show.component"
 import {  OnlyComponent } from "./onlyMovie/only.component"
 import { CutText } from "./pipes/pipe.cutText"
 import { OnlyCatalogTypeComponent } from "./onlyCatalogType/onlycatalogtype.component"
-import { ListComponent } from './list/list.component';
+
 import { ShowsComponent } from './shows/shows.component';
+import { ListComponent } from './list/list.component';
 // routing
 import {  routingMovie } from "./app.route";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'

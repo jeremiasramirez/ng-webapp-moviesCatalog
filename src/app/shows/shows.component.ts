@@ -13,9 +13,9 @@ export class ShowsComponent  {
   public shows : any[];
   public lengthShows:any = 'await'
   public startShow:number=0;
-
+  public addFav:any = "Movie"
   public endShow:number=10;
-
+  public switchFav:boolean=false;
   public spinner = {
     off:true
   }
@@ -29,11 +29,18 @@ export class ShowsComponent  {
 
   }
 
+  public addFavorite(url:string, name:string){
+    this.switchFav = true
+    timer(1500).subscribe(()=>{
+      this.switchFav = false;
+    })
+    localStorage.setItem(name, url)
+  }
   public nextPage(){
 
 
     if (this.endShow < this.shows.length ){
- 
+
       this.startShow+=10
       this.endShow += 10;
 

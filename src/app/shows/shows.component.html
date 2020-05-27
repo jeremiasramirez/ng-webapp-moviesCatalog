@@ -14,22 +14,28 @@
 
         </mat-list-item>
     </mat-list>
-
+    <div class=" removed inTop">
+      {{addFav}} removed <i class="fas fa-trash"></i>
+    </div>
 </section>
 -->
+<div class=" added inTop" *ngIf="switchFav">
+  {{addFav}} On your list <i class="fas fa-check inTop"></i>
+</div>
+
 <div class="responsiveIn" >
 
 
 
-    <mat-card class="sizeCard inTop" matRipple matRippleUnbounded="true"
-    matRippleCentered="true"
-     matRippleRadius="80" *ngFor="let show of shows|slice:startShow:endShow">
+    <mat-card class="sizeCard inTop"*ngFor="let show of shows|slice:startShow:endShow" matRipple matRippleUnbounded="true"
+
+     matRippleRadius="20" >
 
         <mat-card-title> {{show.name}}	</mat-card-title>
-        <img mat-card-image class="minmin"  src="{{show.image.medium}}">
+        <img mat-card-image   class="minmin"  src="{{show.image.medium}}">
 
-        <div  class="add">
-          <i class="far fa-plus-square" style=""></i>
+        <div  class="add"  (click)="addFavorite(show.url, show.name)">
+          <i class="fas fa-plus" style=""></i>
         </div>
     </mat-card>
     <br>
